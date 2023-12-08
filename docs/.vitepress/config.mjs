@@ -6,6 +6,7 @@ export default defineConfig({
   description: "doc",
   appearance:false,
   base:"/quetzal-network-editor-doc/",
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]],
   themeConfig: {
     logo: 'favicon.png',
 
