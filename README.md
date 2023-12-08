@@ -1,5 +1,6 @@
 # quetzal-network-editor-doc
-doc for quetzal-network-editor 
+doc for quetzal-network-editor <br>
+[vitepress doc](https://vitepress.dev/guide/markdown)
 
 ## local dev
 run the website locally
