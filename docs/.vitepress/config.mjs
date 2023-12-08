@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Quetzal Interface",
   description: "doc",
   appearance:false,
+  base:"/quetzal-network-editor-doc/",
   head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   themeConfig: {
     logo: 'favicon.png',
