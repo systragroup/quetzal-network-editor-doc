@@ -1,3 +1,7 @@
+---
+layout: doc
+aside: false
+---
 
 # Model update
 
@@ -5,11 +9,16 @@
 
 You need AWS permissions to update a model on ECR. You can ask for those permissions to the AWS Admin.
 
-``./update-lambda.sh <model_folder_name>``
+::: code-group
 
-Or, in windows, make sure Docker desktop is running and run:
+```bash [Linux]
+./update-lambda.sh <model_folder_name>
+```
+```bat [Windows]
+update-lambda.bat <model_folder_name>
+```
+:::
 
-``update-lambda.bat <model_folder_name>``
 
 
 ## Update Step function workflow 

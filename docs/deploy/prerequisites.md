@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 # Prerequisites
 
 ## AWS-CLI

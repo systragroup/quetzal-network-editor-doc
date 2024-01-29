@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 # Loading a project
 
 load a complete project

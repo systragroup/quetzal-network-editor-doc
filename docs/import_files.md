@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 # Loading files
 
 you can load files individually

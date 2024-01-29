@@ -1,5 +1,10 @@
-# Configuring a model (DOCKER)
+---
+layout: doc
+aside: false
+---
 
+
+# Configuring a model (DOCKER)
 
 Quenedi need its inputs in the following folders :
 

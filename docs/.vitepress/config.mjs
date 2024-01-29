@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Quetzal Interface",
   description: "doc",
-  appearance:false,
+  appearance:false, //True to have dark mode choice
   base:"/quetzal-network-editor-doc/",
   head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]],
   themeConfig: {
@@ -38,7 +38,15 @@ export default defineConfig({
           { text: 'Model Maintenance', link: '/deploy/model_maintenance' },
 
         ]
+      },
+      {
+        text: 'infrastructure',
+        items: [
+          { text: 'Auth', link: '/infra/index' },
+          { text: 'Infrastructure', link: '/infra/api_infra' },
+        ]
       }
+
     ],
 
     socialLinks: [

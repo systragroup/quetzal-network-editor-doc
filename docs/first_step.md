@@ -9,6 +9,6 @@ aside: false
 
 click on the top right corner to login
 
-![Alt text](public/image-1.png)
+![Alt text](/image-1.png)
 
 ## Something

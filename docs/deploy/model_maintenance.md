@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 
 # Maintenance
 ## destroy Terraform workspace (for AWS admin)

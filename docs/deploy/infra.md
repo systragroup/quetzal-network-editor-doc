@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 # INFRA (TERRAFORM)
 
 ::: warning AWS Admin only

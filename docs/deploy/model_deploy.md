@@ -1,5 +1,10 @@
+---
+layout: doc
+aside: false
+---
 
 # Deploying Model
+
 ## Deploying
 
 1. **Copy files** from this `template directory` to the **root of the model directory**
@@ -25,11 +30,13 @@
    ```bash
    push-image.bat <model_folder_name> initial
    ```
+
 8. Add Step function workflow (step 4: step-function.json in the root directory of your model)
 
    ```bash
    python update-function-config.py <model_folder>
    ```
+
 9. Add model files for base scenario to s3 **(first scenario should be base)**
 
    ```bash
@@ -39,7 +46,8 @@
 Note: this script will copy all files from `<model_folder>/scenarios/<scenario1>/` to S3. <br>
 for example. with quetzal_test and a base scenario we would have in quetzal_test: `scenarios/base/inputs/pt/links.geojson` and so on
 
-## Create Cognito User group (Optional) 
+## Create Cognito User group (Optional)
+
 ::: warning AWS Admin only
 :::
 
@@ -48,19 +56,19 @@ for example. with quetzal_test and a base scenario we would have in quetzal_test
   * Select the role created by terraform (Cognito_quetzal_pool_`<model-name>`).
 * You can then add user to the cognito user group in the AWS web interface
 
-* Update cognito_group_access.json in quetzal-config bucket to add available bucket (model) to group. 
-   * ex: `<cognito_user_group>` : [`<model-name>`]
-   * note: this is necessary as there are no other way for the front to know which models (buckets) are accessible.
+* Update cognito_group_access.json in quetzal-config bucket to add available bucket (model) to group.
+  * ex: `<cognito_user_group>` : [`<model-name>`]
+  * note: this is necessary as there are no other way for the front to know which models (buckets) are accessible.
 
 ## Add Access to existing Cognito User group  (Optional)
+
 ::: warning AWS Admin only
 :::
-
 
 * Find the IAM role associate to the Cognito user Group (ex: Cognito_quetzal_pool_`<cognito_user_group>`) under IAM>Roles
 * In the Permissions tab. click "Add persmissions" then attach policies.
 * Select the appropriated policy create by terraform (s3_read_put_`<model-name>`)
   
-* Update cognito_group_access.json in quetzal-config bucket to add available bucket (model) to group. 
-   * ex: `<cognito_user_group>` : [`<model-name>`]
-   * note: this is necessary as there are no other way for the front to know which models (buckets) are accessible.
+* Update cognito_group_access.json in quetzal-config bucket to add available bucket (model) to group.
+  * ex: `<cognito_user_group>` : [`<model-name>`]
+  * note: this is necessary as there are no other way for the front to know which models (buckets) are accessible.
