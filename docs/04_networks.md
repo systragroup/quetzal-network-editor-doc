@@ -65,6 +65,7 @@ Under the Maps tab, you can:
 ![Alt text](/networks_6.png)
 
 
->[!TIP]
->You can create a group field in your road links that you can modify when you multiple select road links on the map. This will allow you to easily identify the links you edited group by group and later filter the links by group and edit them again.
+::: tip :cloud: TIP
+You can create a group field in your road links that you can modify when you multiple select road links on the map. This will allow you to easily identify the links you edited group by group and later filter the links by group and edit them again.
 
+:::
