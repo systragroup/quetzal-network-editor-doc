@@ -29,9 +29,12 @@
 3. Check the agencies to download\*
 4. Download
 
-<small> If an error message appears during download, one of the selected agencies may be the cause; please try again by changing the agencies selected to find the faulty one. </small>
+
 
 ![Alt text](/networks_3.png)
+
+<small> *If an error message appears during download, one of the selected agencies may be the cause; please try again by changing the agencies selected to find the faulty one. </small>
+
 
 
 # B) Visualize and edit networks
