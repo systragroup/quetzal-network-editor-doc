@@ -20,7 +20,7 @@ aside: false
 4. Apply the changes
 5. Save the new preset
 
-![Alt text](/resluts_2.png)
+![Alt text](/results_2.png)
 
 ## Select a preset in edit mode
 
