@@ -1,9 +1,4 @@
 
----
-layout: doc
-aside: false
----
-
 # First steps
 
 ## Login
