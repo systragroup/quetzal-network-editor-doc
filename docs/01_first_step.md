@@ -1,4 +1,3 @@
-
 ---
 layout: doc
 aside: false
@@ -13,4 +12,4 @@ aside: false
 3. If it is your first time connecting with this username, you will be asked to enter a new password
 
 
-![Alt text](/first_steps_1.png)
+![Alt text](/first_step_1.png)
