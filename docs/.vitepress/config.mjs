@@ -20,10 +20,12 @@ export default defineConfig({
       {
         text: 'Get started',
         items: [
-          { text: 'First steps', link: '/first_step' },
-          { text: 'Loading a project', link: '/import_project' },
-          { text: 'Loading files', link: '/import_files' },
-          { text: 'Microservices', link: '/microservices' },
+          { text: 'Login', link: '/01_first_step' },
+          { text: 'Tabs', link: '/02_tabs' },
+          { text: 'Loading project', link: '/03_load_project' },
+          { text: 'Networks', link: '/04_networks' },
+          { text: 'Run', link: '/05_run_simulation' },
+          { text: 'Results', link: '/06_results' },
 
         ]
       },
