@@ -63,7 +63,7 @@ Under the Maps tab, you can:
 
 - Modify road links individually by right clicking on the road link to edit
 - Filter by anyway field desired and edit every link of a type 
-- Select multiple road links by selecting an area on the map (right click) and edit selected info
+- Select multiple road links by selecting an area on the map (right click) and edit selected info. You can also Ctrl+Click on links to add/remove them from the selection.
 
 ![Alt text](/networks_6.png)
 
