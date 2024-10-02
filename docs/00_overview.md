@@ -53,7 +53,7 @@ Most of the bus routes use the road network. To each station to station segment 
 ## Public Transport Network
 The public transport map shows all the public transport routes.
 * the trips can be sorted, filtered and edited in groups with the lateral panel
-![alt text](/here/pt_network_map.png)
+![alt text](/network_editor/pt_network_map.png)
 
 
 
