@@ -1,4 +1,10 @@
 
+---
+layout: doc
+aside: false
+---
+
+
 # Access and manage you projects in the browser
 Quetzal Cloud provides a graphical interface to manage your projects stored in the cloud.
 * Access all your project in the same place. 
@@ -23,6 +29,7 @@ Import a road network from Open Street Map, clean it and convert it to Quetzal's
 Import GTFS data either from a zip file or download it from an online repo and convert it to Quetzal's own public transport format.
 * upload a zip file with the zip importer or 
 * from database.mobilitydata.org
+
 ![Alt text](/gtfs_importer.png)
 
 # Network Editor
