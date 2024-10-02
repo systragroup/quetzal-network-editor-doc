@@ -54,10 +54,23 @@ Most of the bus routes use the road network. To each station to station segment 
 The public transport map shows all the public transport routes.
 * the trips can be sorted, filtered and edited in groups with the lateral panel
 ![alt text](/network_editor/pt_network_map.png)
+The public transport roads can be matched to the road network on the fly by the in-browser simple mapmatching algorithm.
+![alt text](/network_editor/front_mapmatching.png)
+The data of each public transport link can be edited individually.
+![alt text](/network_editor/front_mapmatching.png)
+* the timetable module handles the conversion of frequency based trips into timetables. 
+* the timetables can be edited easily, trips can be duplicated 
+![alt text](/network_editor/timetables.png)
 
-
-
-
+## Road Network
+The road network can easily be edited :
+* add new roads
+* edit nodes and link info
+* easy selection of multible links at a time from group edit
+* direction hints to edit two way links
+![alt text](/network_editor/road.png)
+![alt text](/network_editor/road_edit.png)
+![alt text](/network_editor/road_group_edit.png)
 The network editor offers features 
 ![Alt text](/other/networks_4.png)
 ![Alt text](/other/networks_5.png)
