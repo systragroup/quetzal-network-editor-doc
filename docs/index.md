@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get started
-      link: /first_step
+      link: /00_overview
     - theme: alt
       text: Cloud user
       link: /first_step
