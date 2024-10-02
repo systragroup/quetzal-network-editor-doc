@@ -8,7 +8,7 @@
 3. If it is your first time connecting with this username, you will be asked to enter a new password
 
 
-![Alt text](/load_project.png)
+![Alt text](/load_project_1.png)
 ![Alt text](/networks_1.png)
 ![Alt text](/networks_2.png)
 ![Alt text](/networks_3.png)
