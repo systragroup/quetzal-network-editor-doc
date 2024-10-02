@@ -31,6 +31,20 @@ Import GTFS data either from a zip file or download it from an online repo and c
 
 ![Alt text](/gtfs_importer.png)
 
+## Matrix Road Caster
+
+Matrix Road Caster is a machine learning algorithm used to estimate the average speed on the road links at a given time of the day.
+
+Random origins and destinations are scattered on the network, the Origin-Destination times are requested on the Here API for the chosen time of day
+![alt text](/1_HERE_zones_centroids.png)
+The iterative algorithm adjusts the speed on the network and computes the shortest path until the OD times are consistent between the network and the request pool.
+![alt text](/2_HERE_iteration_error.png)  ![alt text](/3_HERE_road_calibration.png) 
+To calibrate the roads at a small scale with few requests, OD times are interpolated before the iterative OD to road time algorithm.
+![alt text](/4_HERE_OD_prediction_1.png) 
+![alt text](/4_HERE_speed_prediction_1.png) 
+The relevancy of the interpolation is monitored
+![alt text](/5_HERE_model_calibration.png)
+
 # Network Editor
 
 
