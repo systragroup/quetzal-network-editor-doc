@@ -45,15 +45,17 @@ To calibrate the roads at a small scale with few requests, OD times are interpol
 The relevancy of the interpolation is monitored
 ![alt text](/5_HERE_model_calibration.png)
 
+## Mapmatching
+
+Most of the bus routes use the road network. To each station to station segment correspond a list of roads. Understand which roads are used by with bus is crutial to be able to map the load of the buses on the road and to apply the congestion delays to the buses. The mapmatching microservices uses and advanced algorithm to merge the road and public transport network.
+![alt text](/mapmatching.png)
+
 # Network Editor
+## Public Transport Network
+![alt text](pt_network_map.png)
 
 
 
 The network editor offers features 
-
-![Alt text](/load_project_1.png)
-![Alt text](/networks_1.png)
-![Alt text](/networks_2.png)
-![Alt text](/networks_3.png)
 ![Alt text](/networks_4.png)
 ![Alt text](/networks_5.png)
