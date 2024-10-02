@@ -1,12 +1,31 @@
 
-# First steps
+# Access and manage you projects in the browser
+Quetzal Cloud provides a graphical interface to manage your projects stored in the cloud.
+* Access all your project in the same place. 
+* Find, your scenarios easily with the search bar. 
+* Manage the inputs and outputs of your scenarios.
+* Both cloud storage and zip files upload and downloads are supported
 
-## Login
+![Alt text](/project_manager.png)
 
-1. Click on login
-2. Enter the username and password
-3. If it is your first time connecting with this username, you will be asked to enter a new password
+# Microeservices
+The micro services provide robust automated processing to make the best of the road and public transport network data.
 
+## OpenStreetMap importer (OSM importer)
+Import a road network from Open Street Map, clean it and convert it to Quetzal's light road network format.
+* draw a polygon on the map
+* choose the types of roads you want to import, only the main one or the detailed network
+* include cycleway details if needed
+
+![Alt text](/microservices.png)
+
+## GTFS Importer
+![Alt text](/gtfs_importer.png)
+# Network Editor
+
+
+
+The network editor offers features 
 
 ![Alt text](/load_project_1.png)
 ![Alt text](/networks_1.png)
