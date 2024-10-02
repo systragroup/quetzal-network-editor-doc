@@ -6,7 +6,7 @@ Quetzal Cloud provides a graphical interface to manage your projects stored in t
 * Manage the inputs and outputs of your scenarios.
 * Both cloud storage and zip files upload and downloads are supported
 
-![Alt text](/project_manager.)
+![Alt text](/project_manager.png)
 
 # Microeservices
 The micro services provide robust automated processing to make the best of the road and public transport network data.
