@@ -6,7 +6,7 @@ Quetzal Cloud provides a graphical interface to manage your projects stored in t
 * Manage the inputs and outputs of your scenarios.
 * Both cloud storage and zip files upload and downloads are supported
 
-![Alt text](/project_manager.png)
+![Alt text](/load_project_0.png)
 
 # Microeservices
 The micro services provide robust automated processing to make the best of the road and public transport network data.
@@ -24,6 +24,7 @@ Import GTFS data either from a zip file or download it from an online repo and c
 * upload a zip file with the zip importer or 
 * from database.mobilitydata.org
 ![Alt text](/gtfs_importer.png)
+
 # Network Editor
 
 
