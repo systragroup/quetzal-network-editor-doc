@@ -20,8 +20,7 @@ hero:
 
 features:
   - title: Network Editor
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    ![alt text](/network_editor/pt_network_map.png)
+    details: Quetzal Interface offers a powerful network editor for both public transport and roads. ![alt text](/network_editor/pt_network_map.png)
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
