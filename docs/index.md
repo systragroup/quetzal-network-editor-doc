@@ -6,7 +6,7 @@ hero:
   name: "Quetzal Cloud"
   image: "favicon_white.png"
   text: "Transport Modeling"
-  tagline: Opensource Web Solution for Transport Modeling Build powerful models, access them in with a friendly interface and run them in the cloud.
+  tagline: Opensource Web Solution for Transport Modeling. Build powerful models, access them in with a friendly interface and run them in the cloud.
   actions:
     - theme: alt
       text: Overview

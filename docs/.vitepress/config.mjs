@@ -28,7 +28,7 @@ export default defineConfig({
         text: 'How to Use the Interface',
         items: [
           { text: 'Login', link: '/01_first_step' },
-          { text: 'Undestrand the Tabs', link: '/02_tabs' },
+          { text: 'Undestand the Tabs', link: '/02_tabs' },
           { text: 'Load a project', link: '/03_load_project' },
           { text: 'Edit the Networks', link: '/04_networks' },
           { text: 'Run a Simulation', link: '/05_run_simulation' },
