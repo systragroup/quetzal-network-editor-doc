@@ -26,7 +26,7 @@ features:
   - title: Network Editor & Microservices
     details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
   - icon : 
-  src: play-solid.svg
+      src: /play-solid.svg
     title: Launcher
     details: Parametrize your simulations and run then in parallel with the integrated run manager.
   - title: Result Maps and Dashboards
