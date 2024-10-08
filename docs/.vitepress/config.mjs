@@ -18,15 +18,21 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'How to Use the Interface',
+        text: 'Overview',
         items: [
           { text: 'Overview', link: '/00_overview' },
+
+        ]
+      },
+      {
+        text: 'How to Use the Interface',
+        items: [
           { text: 'Login', link: '/01_first_step' },
-          { text: 'Tabs', link: '/02_tabs' },
-          { text: 'Loading project', link: '/03_load_project' },
-          { text: 'Networks', link: '/04_networks' },
-          { text: 'Run', link: '/05_run_simulation' },
-          { text: 'Results', link: '/06_results' },
+          { text: 'Undestrand the Tabs', link: '/02_tabs' },
+          { text: 'Load a project', link: '/03_load_project' },
+          { text: 'Edit the Networks', link: '/04_networks' },
+          { text: 'Run a Simulation', link: '/05_run_simulation' },
+          { text: 'Explore the Results', link: '/06_results' },
 
         ]
       },
@@ -34,7 +40,7 @@ export default defineConfig({
         text: 'How to Deploy a Model',
         items: [
           { text: 'Prerequisites', link: '/deploy/prerequisites' },
-          { text: 'Infra', link: '/deploy/infra' },
+          { text: 'Infrasructure', link: '/deploy/infra' },
           { text: 'Model configuration', link: '/deploy/model_configure' },
           { text: 'Model deploying', link: '/deploy/model_deploy' },
           { text: 'Model update', link: '/deploy/model_update' },
@@ -45,14 +51,14 @@ export default defineConfig({
       {
         text: 'Infrastructure',
         items: [
-          { text: 'Auth', link: '/infra/index' },
+          { text: 'Authentication', link: '/infra/index' },
           { text: 'Infrastructure', link: '/infra/api_infra' },
         ]
       },
       {
         text: 'Quetzal Python Library',
         items: [
-          { text: 'Auth', link: '/quetzal_library/quetzal_library' },
+          { text: 'Overview', link: '/quetzal_library/quetzal_library' },
         ]
       }
 
