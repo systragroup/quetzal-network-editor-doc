@@ -20,7 +20,7 @@ hero:
 
 features:
     
-  - img
+  - img:
       src: /features/run.png
     title: Cloud storage and file manager
     details: All your projects and scenarios available in on place. Parametrize your simulations and run then in parallel with the integrated run manager.
