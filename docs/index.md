@@ -9,7 +9,7 @@ hero:
   tagline: documentation
   actions:
     - theme: brand
-      text: Get started
+      text: Overview
       link: /00_overview
     - theme: alt
       text: Tutorial
@@ -19,11 +19,14 @@ hero:
       link: /deploy/prerequisites
 
 features:
-  - title: Network Editor
-    details: Quetzal Interface offers a powerful network editor for both public transport and roads. ![alt text](/network_editor/pt_network_map.png)
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Cloud storage and file manager
+    details: All your projects and scenarios available in on place. 
+  - title: Network Editor & Microservices
+    details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
+  - title: Launcher
+    details: Parametrize your simulations and run then in parallel with the integrated run manager.
+  - title: Result Maps and Dashboards
+    details: Create interactive result maps and illustrated reports.
+  - title: Powered by Quetzal
+    details: Quetzal is an opensource python library for transport modeling. Build powerful customizable models with Quetzal and make them available with Quetzal Interface.
 ---
-

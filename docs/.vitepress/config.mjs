@@ -13,12 +13,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Get started', link: '/first_step' }
+      { text: 'Overview', link: '/00_overview' }
     ],
 
     sidebar: [
       {
-        text: 'Get started',
+        text: 'How to Use the Interface',
         items: [
           { text: 'Overview', link: '/00_overview' },
           { text: 'Login', link: '/01_first_step' },
@@ -31,7 +31,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'deploy a model',
+        text: 'How to Deploy a Model',
         items: [
           { text: 'Prerequisites', link: '/deploy/prerequisites' },
           { text: 'Infra', link: '/deploy/infra' },
@@ -43,10 +43,16 @@ export default defineConfig({
         ]
       },
       {
-        text: 'infrastructure',
+        text: 'Infrastructure',
         items: [
           { text: 'Auth', link: '/infra/index' },
           { text: 'Infrastructure', link: '/infra/api_infra' },
+        ]
+      },
+      {
+        text: 'Quetzal Python Library',
+        items: [
+          { text: 'Auth', link: '/quetzal_library/quetzal_library' },
         ]
       }
 
