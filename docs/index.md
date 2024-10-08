@@ -5,22 +5,24 @@ layout: home
 hero:
   name: "Quetzal Cloud"
   image: "favicon_white.png"
-  text: "Opensource Web Solution for Transport Modeling"
-  tagline: Build powerful models, access them in with a friendly interface and run them in the cloud.
+  text: "Transport Modeling"
+  tagline: Opensource Web Solution for Transport Modeling Build powerful models, access them in with a friendly interface and run them in the cloud.
   actions:
     - theme: brand
       text: Overview
       link: /00_overview
     - theme: alt
       text: How to Use the Interface
-      link: /00_first_step
+      link: /01_first_step
     - theme: alt
       text: Developper
       link: /deploy/prerequisites
 
 features:
+    
   - title: Cloud storage and file manager
     details: All your projects and scenarios available in on place. 
+    src: /features/run.png
   - title: Network Editor & Microservices
     details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
   - title: Launcher
