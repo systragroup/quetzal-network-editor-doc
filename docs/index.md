@@ -12,18 +12,16 @@ hero:
       text: Get started
       link: /00_overview
     - theme: alt
-      text: Cloud user
-      link: /first_step
-    - theme: alt
-      text: Offline user
-      link: /first_step
+      text: Tutorial
+      link: /00_first_step
     - theme: alt
       text: developper
       link: /deploy/prerequisites
 
 features:
-  - title: Feature A
+  - title: Network Editor
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    ![alt text](/network_editor/pt_network_map.png)
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
