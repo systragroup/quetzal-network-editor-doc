@@ -8,7 +8,7 @@ hero:
   text: "Transport Modeling"
   tagline: Opensource Web Solution for Transport Modeling Build powerful models, access them in with a friendly interface and run them in the cloud.
   actions:
-    - theme: brand
+    - theme: alt
       text: Overview
       link: /00_overview
     - theme: alt
@@ -23,18 +23,13 @@ features:
   - icon:
       src: /cloud-solid.svg
     title: Cloud storage and file manager
-    details: All your projects and scenarios available in on place. Parametrize your simulations and run then in parallel with the integrated run manager.
-  
+    details: Access all your projects and scenarios available in on place. Parametrize your simulations and run thenm in parallel with the integrated run manager.
   - title: Network Editor & Microservices
     icon : 
       src: /map-solid.svg
     details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
   - icon : 
-      src: /play-solid.svg
-    title: Launcher
-    details: Parametrize your simulations and run then in parallel with the integrated run manager.
-  - icon : 
-      src: /image-solid.svg
+      src: /images-solid.svg
     title: Result Maps and Dashboards
     details: Create interactive result maps and illustrated reports.
   - icon : 
