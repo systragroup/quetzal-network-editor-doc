@@ -27,18 +27,18 @@ features:
   
   - title: Network Editor & Microservices
     icon : 
-      src: /gauge-high-solid.svg
+      src: /map-solid.svg
     details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
   - icon : 
       src: /play-solid.svg
     title: Launcher
     details: Parametrize your simulations and run then in parallel with the integrated run manager.
   - icon : 
-      src: /map-solid.svg
+      src: /image-solid.svg
     title: Result Maps and Dashboards
     details: Create interactive result maps and illustrated reports.
   - icon : 
-      src: /play-solid.svg
+      src: /qvoid_fav.svg
     title: Powered by Quetzal
     details: Quetzal is an opensource python library for transport modeling. Build powerful customizable models with Quetzal and make them available with Quetzal Interface.
 ---
