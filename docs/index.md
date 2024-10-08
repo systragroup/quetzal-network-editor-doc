@@ -3,19 +3,19 @@
 layout: home
 
 hero:
-  name: "Quetzal Interface"
+  name: "Quetzal Cloud"
   image: "favicon_white.png"
-  text: "Guide"
-  tagline: documentation
+  text: "Opensource Web Solution for Transport Modeling"
+  tagline: Build powerful models, access them in with a friendly interface and run them in the cloud.
   actions:
     - theme: brand
       text: Overview
       link: /00_overview
     - theme: alt
-      text: Tutorial
+      text: How to Use the Interface
       link: /00_first_step
     - theme: alt
-      text: developper
+      text: Developper
       link: /deploy/prerequisites
 
 features:
