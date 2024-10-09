@@ -30,7 +30,9 @@ export const en = defineConfig({
             { text: 'Login', link: '/howto/01_first_step' },
             { text: 'Undestand the Tabs', link: '/howto/02_tabs' },
             { text: 'Load a project', link: '/howto/03_load_project' },
-            { text: 'Edit the Networks', link: '/howto/04_networks' },
+            { text: 'Dowload Network', link: '/howto/04_download_network' },
+            { text: 'Edit Public Transport', link: '/howto/04_pt_network' },
+            { text: 'Edit Roads', link: '/howto/04_road_network' },
             { text: 'Run a Simulation', link: '/howto/05_run_simulation' },
             { text: 'Explore the Results', link: '/howto/06_results' },
   
