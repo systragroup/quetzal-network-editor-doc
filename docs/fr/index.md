@@ -3,30 +3,37 @@
 layout: home
 
 hero:
-  name: "Quetzal Interface"
+  name: "Quetzal Cloud"
   image: "favicon_white.png"
-  text: "Guide"
-  tagline: documentation
+  text: "Transport Modeling"
+  tagline: Opensource Web Solution for Transport Modeling. Build powerful models, access them in with a friendly interface and run them in the cloud.
   actions:
-    - theme: brand
-      text: Get started
-      link: /first_step
     - theme: alt
-      text: Cloud user
-      link: /first_step
+      text: Overview
+      link: /fr/00_overview
     - theme: alt
-      text: Offline user
-      link: /first_step
+      text: How to Use the Interface
+      link: /fr/howto/01_first_step
     - theme: alt
-      text: developper
-      link: /deploy/prerequisites
+      text: Developper
+      link: /fr/deploy/prerequisites
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    
+  - icon:
+      src: /cloud-solid.svg
+    title: Cloud storage and file manager
+    details: Access all your projects and scenarios available in on place. Parametrize your simulations and run thenm in parallel with the integrated run manager.
+  - title: Network Editor & Microservices
+    icon : 
+      src: /map-solid.svg
+    details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
+  - icon : 
+      src: /images-solid.svg
+    title: Result Maps and Dashboards
+    details: Create interactive result maps and illustrated reports.
+  - icon : 
+      src: /qvoid_fav.svg
+    title: Powered by Quetzal
+    details: Quetzal is an opensource python library for transport modeling. Build powerful customizable models with Quetzal and make them available with Quetzal Interface.
 ---
-
