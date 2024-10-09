@@ -25,7 +25,9 @@ Once your line is created, click anywhere on the the map to start drawing. Once 
 ![Alt text](/network_editor/new_line_2.png)
 ![Alt text](/network_editor/new_line_3.png)
 
+::: tip :cloud: TIP
 Once you have created a trip for one direction, you can duplicate it and reverse it to create the return trip. For bus trips, you may have to adjust a litle bit the return trip to avoid one way roads.
+:::
 
 ![Alt text](/network_editor/duplicate_line.png)
 
