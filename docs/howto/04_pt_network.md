@@ -36,8 +36,9 @@ Once you have created a trip for one direction, you can duplicate it and reverse
 To edit the itinerary of a trip, find it in the left pannel and click on its name (you can use the filters and the search function to find it, to use the search function, type the first few letters of your trip).
 
 Alternatively, you can hover on the map and right click on your trip, a popup will open and you can chose which trip you want to edit.
+
 ![Alt text](/network_editor/select_trip.png)
-![Alt text](/network_editor/search_line.png)
+![Alt text](/network_editor/search_trip.png)
 
 
 ## Edit the properties of a trip
