@@ -14,3 +14,9 @@ Under the Maps tab, you can:
 - Follow roads
 
 ![Alt text](/networks_5.png)
+
+## Add a New Public Transport Line
+
+![Alt text](/network_editor/new_line.png)
+![Alt text](/network_editor/new_line_2.png)
+![Alt text](/network_editor/new_line_3.png)
