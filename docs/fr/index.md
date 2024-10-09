@@ -5,35 +5,35 @@ layout: home
 hero:
   name: "Quetzal Cloud"
   image: "favicon_white.png"
-  text: "Transport Modeling"
-  tagline: Opensource Web Solution for Transport Modeling. Build powerful models, access them in with a friendly interface and run them in the cloud.
+  text: "Modélisation des Transports"
+  tagline: Solution Web Open Source pour la Modélisation des Transports. Créez des modèles puissants, accédez-y via une interface conviviale et exécutez-les dans le cloud.
   actions:
     - theme: alt
-      text: Overview
+      text: Aperçu
       link: /fr/00_overview
     - theme: alt
-      text: How to Use the Interface
+      text: Comment utiliser l'interface
       link: /fr/howto/01_first_step
     - theme: alt
-      text: Developper
+      text: Développeur
       link: /fr/deploy/prerequisites
 
 features:
     
   - icon:
       src: /cloud-solid.svg
-    title: Cloud storage and file manager
-    details: Access all your projects and scenarios available in on place. Parametrize your simulations and run thenm in parallel with the integrated run manager.
-  - title: Network Editor & Microservices
-    icon : 
+    title: Stockage cloud et gestionnaire de fichiers
+    details: Accédez à tous vos projets et scénarios disponibles en un seul endroit. Paramétrez vos simulations et exécutez-les en parallèle avec le gestionnaire d'exécution intégré.
+  - title: Éditeur de Réseau & Microservices
+    icon: 
       src: /map-solid.svg
-    details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
-  - icon : 
+    details: Modifiez facilement les itinéraires de transport public et les routes et profitez d'une suite complète d'outils de réseau.
+  - icon: 
       src: /images-solid.svg
-    title: Result Maps and Dashboards
-    details: Create interactive result maps and illustrated reports.
-  - icon : 
+    title: Cartes de Résultats et Tableaux de Bord
+    details: Créez des cartes de résultats interactives et des rapports illustrés.
+  - icon: 
       src: /qvoid_fav.svg
-    title: Powered by Quetzal
-    details: Quetzal is an opensource python library for transport modeling. Build powerful customizable models with Quetzal and make them available with Quetzal Interface.
+    title: Propulsé par Quetzal
+    details: Quetzal est une bibliothèque Python open source pour la modélisation des transports. Créez des modèles puissants et personnalisables avec Quetzal et rendez-les accessibles avec l'Interface Quetzal.
 ---
