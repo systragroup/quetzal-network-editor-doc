@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export const defineConfig({
     title: "Quetzal Interface",
     description: "doc",
     appearance:false, //True to have dark mode choice
