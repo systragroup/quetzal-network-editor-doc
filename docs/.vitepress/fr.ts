@@ -18,57 +18,52 @@ export const fr = defineConfig({
   
       sidebar: [
         {
-          text: 'Overview',
+          text: 'Aperçu',
           items: [
-            { text: 'Overview', link: '/00_overview' },
-  
+            { text: 'Aperçu', link: '/00_overview' },
           ]
         },
         {
-          text: 'How to Use the Interface',
+          text: 'Comment utiliser l\'interface',
           items: [
-            { text: 'Login en Français', link: '/howto/01_first_step' },
-            { text: 'Undestand the Tabs', link: '/howto/02_tabs' },
-            { text: 'Load a project', link: '/howto/03_load_project' },
-            { text: 'Edit the Networks', link: '/howto/04_networks' },
-            { text: 'Run a Simulation', link: '/howto/05_run_simulation' },
-            { text: 'Explore the Results', link: '/howto/06_results' },
-  
+            { text: 'Connexion en Français', link: '/howto/01_first_step' },
+            { text: 'Comprendre les Onglets', link: '/howto/02_tabs' },
+            { text: 'Charger un projet', link: '/howto/03_load_project' },
+            { text: 'Modifier les Réseaux', link: '/howto/04_networks' },
+            { text: 'Exécuter une Simulation', link: '/howto/05_run_simulation' },
+            { text: 'Explorer les Résultats', link: '/howto/06_results' },
           ]
         },
         {
-          text: 'How to Deploy a Model',
+          text: 'Comment déployer un Modèle',
           items: [
-            { text: 'Prerequisites', link: '/deploy/prerequisites' },
-            { text: 'Infrasructure', link: '/deploy/infra' },
-            { text: 'Model configuration', link: '/deploy/model_configure' },
-            { text: 'Model deploying', link: '/deploy/model_deploy' },
-            { text: 'Model update', link: '/deploy/model_update' },
-            { text: 'Model Maintenance', link: '/deploy/model_maintenance' },
-  
+            { text: 'Prérequis', link: '/deploy/prerequisites' },
+            { text: 'Infrastructure', link: '/deploy/infra' },
+            { text: 'Configuration du Modèle', link: '/deploy/model_configure' },
+            { text: 'Déploiement du Modèle', link: '/deploy/model_deploy' },
+            { text: 'Mise à Jour du Modèle', link: '/deploy/model_update' },
+            { text: 'Maintenance du Modèle', link: '/deploy/model_maintenance' },
           ]
         },
         {
           text: 'Infrastructure',
           items: [
-            { text: 'Authentication', link: '/infra/index' },
+            { text: 'Authentification', link: '/infra/index' },
             { text: 'Infrastructure', link: '/infra/api_infra' },
           ]
         },
         {
-          text: 'Quetzal Python Library',
+          text: 'Bibliothèque Python Quetzal',
           items: [
-            { text: 'Overview', link: '/quetzal_library/quetzal_library' },
+            { text: 'Aperçu', link: '/quetzal_library/quetzal_library' },
           ]
         },
         {
-          text: 'Project Specific Trainings',
+          text: 'Formations Spécifiques aux Projets',
           items: [
             { text: 'Introduction', link: '/trainings/00_introduction' },
-  
           ]
         }
-  
       ],
   
       socialLinks: [
