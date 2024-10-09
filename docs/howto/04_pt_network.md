@@ -33,12 +33,33 @@ Once you have created a trip for one direction, you can duplicate it and reverse
 
 ## Edit itinerary of a trip
 
+### Select a trip
+
 To edit the itinerary of a trip, find it in the left pannel and click on its name (you can use the filters and the search function to find it, to use the search function, type the first few letters of your trip).
 
 Alternatively, you can hover on the map and right click on your trip, a popup will open and you can chose which trip you want to edit.
 
 ![Alt text](/network_editor/select_trip.png)
 ![Alt text](/network_editor/search_trip.png)
+
+### Options
+By default, the trip is created «as the crow flies», straight lines connect the stations. Othe options are available.
+* Edit Line Geometry
+* Stick Nodes on Existing Nodes
+* Follow Roads
+#### Edit Line Geometry
+with this option, you can place «anchors» on your trip in order to define more precisely the geometry of the trip : left click to add an anchor point, right click to delete one. This points are not stops, passengers cannot board nor alight there.
+![Alt text](/network_editor/edit_line_geometry.png)
+
+#### Stick Nodes on Existing Nodes
+When this option is activated, the other public transport stops are displayed. When you edit the itinerary of *your_trip*, you can click on the existing node of *another_trip*, then *your_trip* will also stop at this node.   
+![Alt text](/network_editor/magnet.png)
+
+#### Stick Nodes on Existing Nodes
+when this option is activated, the geometry of your trip will follow the roads for all the new stops you add.
+
+You can also click on *ALL* or *NONE* to map all your trip to the road network or revert to straight lines (none).
+![Alt text](/network_editor/trip_routing.png)
 
 
 ## Edit the properties of a trip
