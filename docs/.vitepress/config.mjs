@@ -64,7 +64,7 @@ export default defineConfig({
       {
         text: 'Project Specific Trainings',
         items: [
-          { text: 'Introduction', link: 'trainings/00_introduction' },
+          { text: 'Introduction', link: '/trainings/00_introduction' },
 
         ]
       }

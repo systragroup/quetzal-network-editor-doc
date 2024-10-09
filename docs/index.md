@@ -13,7 +13,7 @@ hero:
       link: /00_overview
     - theme: alt
       text: How to Use the Interface
-      link: /01_first_step
+      link: /howto/01_first_step
     - theme: alt
       text: Developper
       link: /deploy/prerequisites
