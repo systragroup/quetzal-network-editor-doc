@@ -20,13 +20,13 @@ export const fr = defineConfig({
         {
           text: 'Aperçu',
           items: [
-            { text: 'Aperçu', link: '/00_overview' },
+            { text: 'Aperçu', link: 'fr/00_overview' },
           ]
         },
         {
           text: 'Comment utiliser l\'interface',
           items: [
-            { text: 'Connexion en Français', link: 'fr/howto/01_first_step' },
+            { text: 'Connexion', link: 'fr/howto/01_first_step' },
             { text: 'Comprendre les Onglets', link: 'fr/howto/02_tabs' },
             { text: 'Charger un projet', link: 'fr/howto/03_load_project' },
             { text: 'Modifier les Réseaux', link: 'fr/howto/04_networks' },
@@ -59,7 +59,9 @@ export const fr = defineConfig({
           ]
         },
         {
+
           text: 'Formations Spécifiques aux Projets',
+          collapsed=true,
           items: [
             { text: 'Introduction', link: 'fr/trainings/00_introduction' },
           ]
