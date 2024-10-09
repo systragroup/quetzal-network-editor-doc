@@ -49,16 +49,19 @@ By default, the trip is created «as the crow flies», straight lines connect th
 * Follow Roads
 #### Edit Line Geometry
 with this option, you can place «anchors» on your trip in order to define more precisely the geometry of the trip : left click to add an anchor point, right click to delete one. This points are not stops, passengers cannot board nor alight there.
+
 ![Alt text](/network_editor/edit_line_geometry.png)
 
 #### Stick Nodes on Existing Nodes
 When this option is activated, the other public transport stops are displayed. When you edit the itinerary of *your_trip*, you can click on the existing node of *another_trip*, then *your_trip* will also stop at this node.   
+
 ![Alt text](/network_editor/magnet.png)
 
 #### Stick Nodes on Existing Nodes
 when this option is activated, the geometry of your trip will follow the roads for all the new stops you add.
 
 You can also click on *ALL* or *NONE* to map all your trip to the road network or revert to straight lines (none).
+
 ![Alt text](/network_editor/trip_routing.png)
 
 
