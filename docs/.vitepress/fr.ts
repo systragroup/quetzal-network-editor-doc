@@ -61,7 +61,7 @@ export const fr = defineConfig({
         {
 
           text: 'Formations Spécifiques aux Projets',
-          collapsed=true,
+          collapsed:true,
           items: [
             { text: 'Introduction', link: 'fr/trainings/00_introduction' },
           ]
