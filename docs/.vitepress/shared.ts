@@ -9,7 +9,9 @@ export const shared = defineConfig({
     head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]],
     themeConfig: {
       logo: 'favicon.png',
-  
+      search: {
+        provider: 'local'
+      },
       socialLinks: [
         { icon: 'github', link: 'https://github.com/systragroup/quetzal-network-editor-doc' }
       ]
