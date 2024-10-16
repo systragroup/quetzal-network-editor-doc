@@ -7,7 +7,7 @@ export const shared = defineConfig({
     appearance:false, //True to have dark mode choice
     base:"/quetzal-network-editor-doc/",
     head: [
-      ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+      //['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
