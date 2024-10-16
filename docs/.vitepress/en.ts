@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export const en = defineConfig({
-    title: "Quetzal Interface",
+    title: "Quetzal Cloud",
     description: "doc",
     appearance:false, //True to have dark mode choice
     base:"/quetzal-network-editor-doc/",
