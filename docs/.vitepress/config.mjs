@@ -4,7 +4,7 @@ import {en} from './en'
 import {fr} from './fr'
 
 export default defineConfig({
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
   ...shared,
   locales: {
     root: {
