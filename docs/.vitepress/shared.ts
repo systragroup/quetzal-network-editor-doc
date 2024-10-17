@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export const shared = defineConfig({
     title: "Quetzal Cloud",
     description: "doc",
-    appearance:false, //True to have dark mode choice
+    appearance:true, //True to have dark mode choice
     base:"/quetzal-network-editor-doc/",
 
     themeConfig: {

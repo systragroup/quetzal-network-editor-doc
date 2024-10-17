@@ -40,20 +40,22 @@ export const en = defineConfig({
         {
           text: 'How to Deploy a Model',
           items: [
-            { text: 'Prerequisites', link: '/deploy/prerequisites' },
-            { text: 'Infrasructure', link: '/deploy/infra' },
-            { text: 'Model configuration', link: '/deploy/model_configure' },
-            { text: 'Model deploying', link: '/deploy/model_deploy' },
-            { text: 'Model update', link: '/deploy/model_update' },
-            { text: 'Model Maintenance', link: '/deploy/model_maintenance' },
+            { text: 'Prerequisites', link: '/deploy/01_prerequisites' },
+            { text: 'Model configuration', link: '/deploy/02_model_configure' },
+            { text: 'Model deploying', link: '/deploy/03_model_deploy' },
+            { text: 'Model user group', link: '/deploy/04_model_user_group' },
+            { text: 'Model update', link: '/deploy/05_model_update' },
+            { text: 'Model Maintenance', link: '/deploy/06_model_maintenance' },
   
           ]
         },
         {
           text: 'Infrastructure',
           items: [
-            { text: 'Authentication', link: '/infra/index' },
-            { text: 'Infrastructure', link: '/infra/api_infra' },
+            { text: 'Prerequisites', link: '/infra/01_prerequisites' },
+            { text: 'Creation', link: '/infra/02_create_infra' },
+            { text: 'INFO Authentication', link: '/infra/index' },
+            { text: 'INFO Infrastructure', link: '/infra/api_infra' },
           ]
         },
         {

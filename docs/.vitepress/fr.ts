@@ -36,19 +36,21 @@ export const fr = defineConfig({
         {
           text: 'Comment déployer un Modèle',
           items: [
-            { text: 'Prérequis', link: 'fr/deploy/prerequisites' },
-            { text: 'Infrastructure', link: 'fr/deploy/infra' },
-            { text: 'Configuration du Modèle', link: 'fr/deploy/model_configure' },
-            { text: 'Déploiement du Modèle', link: 'fr/deploy/model_deploy' },
-            { text: 'Mise à Jour du Modèle', link: 'fr/deploy/model_update' },
-            { text: 'Maintenance du Modèle', link: 'fr/deploy/model_maintenance' },
+            { text: 'Prérequis', link: 'fr/deploy/01_prerequisites' },
+            { text: 'Configuration du Modèle', link: 'fr/deploy/02_model_configure' },
+            { text: 'Déploiement du Modèle', link: 'fr/deploy/03_model_deploy' },
+            { text: "Groupe d'utilisateur", link: '/deploy/04_model_user_group' },
+            { text: 'Mise à Jour du Modèle', link: 'fr/deploy/05_model_update' },
+            { text: 'Maintenance du Modèle', link: 'fr/deploy/06_model_maintenance' },
           ]
         },
         {
           text: 'Infrastructure',
           items: [
-            { text: 'Authentification', link: 'fr/infra/index' },
-            { text: 'Infrastructure', link: 'fr/infra/api_infra' },
+            { text: 'Prérequis', link: 'fr/infra/01_prerequisites' },
+            { text: 'Création', link: 'fr/infra/02_create_infra' },
+            { text: 'info Authentification', link: 'fr/infra/index' },
+            { text: 'info Infrastructure', link: 'fr/infra/api_infra' },
           ]
         },
         {

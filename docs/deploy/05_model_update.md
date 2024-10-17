@@ -1,7 +1,4 @@
----
-layout: doc
-aside: false
----
+
 
 # Model update
 

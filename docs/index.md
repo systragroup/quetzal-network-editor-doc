@@ -16,7 +16,7 @@ hero:
       link: /howto/01_first_step
     - theme: alt
       text: Developper
-      link: /deploy/prerequisites
+      link: /deploy/01_prerequisites
 
 features:
     

@@ -1,7 +1,3 @@
----
-layout: doc
-aside: false
----
 
 
 # Maintenance
