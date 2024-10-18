@@ -5,7 +5,7 @@ outline: deep
 # Deploying Model
 
 ::: info
-   Files are under `docker/` into **quetzal-network-editor-backend**
+   Files are under `docker/` into **[quetzal-network-editor-backend](https://github.com/systragroup/quetzal-network-editor-backend/tree/main/docker)**
 :::
 
 ## Configuration

@@ -2,9 +2,20 @@
 
 # Model update
 
-## Update a model on ECR (docker)
+::: info
+   scripts are under `docker/scripts` into **[quetzal-network-editor-backend](https://github.com/systragroup/quetzal-network-editor-backend)**
+:::
 
-You need AWS permissions to update a model on ECR. You can ask for those permissions to the AWS Admin.
+![Alt text](/deploy/model_infra.png)
+
+## 1. Update a model on ECR (docker)
+
+This will Create and deploy a docker image with:
+ * Python and python librairies (requirement.txt)
+ * model Notebooks
+ * model inputs files
+
+Run the command and provide a tag (anything) when prompted
 
 ::: code-group
 
@@ -18,19 +29,23 @@ update-lambda.bat <model_folder_name>
 
 
 
-## Update Step function workflow 
-step-function.json in the root directory of your model
+## 2. Update Step function workflow 
 
-   ```bash
-   python update-function-config.py <model_folder>
-   ```
+This will only push the step-functions.json file Which tells the model steps (which notebooks to run)
 
-## Update scenario (S3)
+```bash
+python update-function-config.py <model_folder>
+```
 
-   ```bash
-   python update-S3-model-files.py <model_folder> <scenario1> <scenario2>
-   ```
-::: info
-this script will copy all files from `<model_folder>/scenarios/<scenario1>/` to S3. <br>
-for example. with quetzal_test and a base scenario we would have in quetzal_test: `scenarios/base/inputs/pt/links.geojson` and so on
+## 3. Update scenario (S3)
+
+this script will copy a scenario from your local scenario folder `<model_folder>/scenarios/<scenario1>/` to the database (S3).
+
+You can add more than one scenario at the time `(<scenario> <scenario2> ...)`
+
+```bash
+python update-S3-model-files.py <model_folder> <scenario1> <scenario2>
+```
+::: danger Danger
+data will be permenently replace on the database for the updated scenarios.
 :::
