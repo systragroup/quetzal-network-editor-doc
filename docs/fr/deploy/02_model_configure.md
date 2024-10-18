@@ -18,8 +18,13 @@ When deploying a model. The files will be splited into 2 different "database".
 
 ![Alt text](/deploy/model_infra.png)
 
+:::info 
+the [step function](03_model_deploy.html#step-functions-json) defines which notebook to run in which order
+:::
 
 ## Local model File Structure
+
+The reccomanded file structure for a model is display bellow. It contains **scenarios** folder to mimic the scenario structure we will have on the cloud.
 
 ```
 .
