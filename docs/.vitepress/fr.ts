@@ -42,6 +42,7 @@ export const fr = defineConfig({
             { text: "Groupe d'utilisateur", link: '/deploy/04_model_user_group' },
             { text: 'Mise à Jour du Modèle', link: 'fr/deploy/05_model_update' },
             { text: 'Maintenance du Modèle', link: 'fr/deploy/06_model_maintenance' },
+            { text: 'Configuration avancée', link: 'fr/deploy/07_model_configure_advanced' },
           ]
         },
         {

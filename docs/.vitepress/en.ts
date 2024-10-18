@@ -46,6 +46,7 @@ export const en = defineConfig({
             { text: 'Model user group', link: '/deploy/04_model_user_group' },
             { text: 'Model update', link: '/deploy/05_model_update' },
             { text: 'Model Maintenance', link: '/deploy/06_model_maintenance' },
+            { text: 'Advanced configuration', link: '/deploy/07_model_configure_advanced' },
   
           ]
         },

@@ -31,7 +31,7 @@ update-lambda.bat <model_folder_name>
 
 ## 2. Update Step function workflow 
 
-This will only push the step-functions.json file Which tells the model steps (which notebooks to run)
+This will only push the step-functions.json file Which tells the model steps (which notebooks to run). [more info](03_model_deploy.html#step-functions-json)
 
 ```bash
 python update-function-config.py <model_folder>
