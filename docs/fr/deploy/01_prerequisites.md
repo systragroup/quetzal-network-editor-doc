@@ -15,6 +15,9 @@ First You need the **AWS Command Line Interface** and **Credentials**.
 ::: warning Contact an Administrator to receive your credentials
 :::
 
+::: danger you need will need administrator access
+:::
+
 Install AWS CLI using [this guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 After this, configure your profile with your **Credentials** running this command in the terminal:
@@ -32,9 +35,21 @@ After this, configure your profile with your **Credentials** running this comman
 
 Install **Docker** using [this guide](https://docs.docker.com/get-docker/)
 
-::: info  Windows
- install Docker Desktop
+::: danger you need will need administrator access
 :::
+
+::: info  Windows
+ install Docker Desktop.
+ Add local user to docker-users as an administrator. [see](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows) 
+:::
+
+
+you can test that docker is install properly by running this command in the terminal
+
+```bash
+docker run hello-world
+```
+
 
 ## Quetzal-network-editor-backend
 
