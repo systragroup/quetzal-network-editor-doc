@@ -23,3 +23,9 @@
 1. Click on the arrow and select the preset to display
 2. Change the settings (see the section Change Visualization Settings)
 
+![Alt text](/result/preset.png)
+
+## Change Visualization Settings
+
+1. Open the settings
+2. Change the settings among different category to change the visual 
