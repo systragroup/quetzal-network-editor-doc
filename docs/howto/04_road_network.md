@@ -13,6 +13,6 @@ You can create a group field in your road links that you can modify when you mul
 
 :::
 
-To select many several road links at the same time, hold shift and click on all the road links
+To select many several road links at the same time, hold shift and click on all the road links.
 
 ![Alt text](/network_editor/road_group_edit.png)
