@@ -28,4 +28,10 @@
 ## Change Visualization Settings
 
 1. Open the settings
-2. Change the settings among different category to change the visual 
+2. Change the settings among different parameter to change the visual
+
+3. Explanation of the different parameters :
+
+- MinWidth/maxWidth : Size of the element at the beggining/end of the scale
+- NumStep : Number of division inside the color scale
+- scale : Function used to catacterise the value of the scale
