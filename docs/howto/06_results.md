@@ -8,6 +8,14 @@
 
 ![Alt text](/results_3.png)
 
+# Results
+
+## Select a map style
+
+1. Click on the arrow and select the map style to display
+
+![Alt text](/results/pchose-map.png)
+
 ## Load visualization settings
 
 1. Open the settings
