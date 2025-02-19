@@ -9,7 +9,7 @@ Work in progress
 Work in progress
 # 4 Step Structure
 Quetzal was inspired by the classical 4 step transport modeling and provides algorithms
-![classical four step structure](/transport_modeling/steps_en.png)
+
 - The sequence of the four steps is based on :
     - Data workflow constraints e.g., the outputs of the generation are used for the distribution
     - Our understanding of the decision process 
@@ -17,6 +17,8 @@ Quetzal was inspired by the classical 4 step transport modeling and provides alg
 - It is flexible though:
     - The travel times generated in the assignment are used in the upstream steps of distribution and modal split
     - Two or more steps can be integrated in order to model our choices more accurately.
+
+![classical four step structure](/transport_modeling/steps_en.png)
 
 - Although Quetzal provides the tools to build a standard four-stage model, we often use another framework to better model multi-modality and ensure consistency between the modal split and the assignment
 - *Generation* and *distribution* remain the same
