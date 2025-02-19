@@ -1,3 +1,8 @@
+---
+layout: doc
+aside: false
+---
+
 # WORK IN PROGRESS | WIP
 This section is progress, we hope to provide a more comprehensive introduction to static macroscopic transport modeling soon.
 A complete introduction to the topic can be found in the book that inspired most of Quetzal's implementation.
