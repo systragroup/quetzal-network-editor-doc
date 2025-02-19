@@ -39,9 +39,9 @@ Explanation of the different parameters :
 
 ![Alt text](/results/Settings.png)
 
-. MinWidth/maxWidth : Size of the element at the beggining/end of the scale
-. NumStep : Number of division inside the color scale
-. scale : Function used by the scale
-. Left side driving : use if the driving side of the country is left
-. show NaN : Show entity with no value for the chosen field
-. custom scale : use it to chose first and last value of the scale
+- MinWidth/maxWidth : Size of the element at the beggining/end of the scale
+- NumStep : Number of division inside the color scale
+- scale : Function used by the scale
+- Left side driving : use if the driving side of the country is left
+- show NaN : Show entity with no value for the chosen field
+- custom scale : use it to chose first and last value of the scale
