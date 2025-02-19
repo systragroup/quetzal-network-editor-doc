@@ -44,4 +44,4 @@ Explanation of the different parameters :
 * scale : Function used by the scale
 * Left side driving : use if the driving side of the country is left
 * show NaN : Show entity with no value for the chosen field
-*custom scale : use it to chose first and last value of the scale
+* custom scale : use it to chose first and last value of the scale
