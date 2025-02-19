@@ -23,14 +23,14 @@
 1. Click on the arrow and select the preset to display
 2. Change the settings (see the section Change Visualization Settings)
 
-![Alt text](/result/preset.png)
+![Alt text](/results/preset.png)
 
 ## Change Visualization Settings
 
 1. Open the settings
 2. Change the settings among different parameter to change the visual
 Explanation of the different parameters :
-![Alt text](/result/Settings.png)
+![Alt text](/results/Settings.png)
 - MinWidth/maxWidth : Size of the element at the beggining/end of the scale
 - NumStep : Number of division inside the color scale
 - scale : Function used by the scale
