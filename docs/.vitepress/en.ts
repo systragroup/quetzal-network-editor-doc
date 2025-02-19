@@ -62,6 +62,7 @@ export const en = defineConfig({
         {
           text: 'Quetzal Python Library',
           items: [
+            { text: 'Transport Modeling', link: '/quetzal_library/transport_modeling_intro' },
             { text: 'Overview', link: '/quetzal_library/quetzal_library' },
           ]
         },
