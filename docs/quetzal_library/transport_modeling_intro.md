@@ -32,3 +32,20 @@ Quetzal was inspired by the classical 4 step transport modeling and provides alg
 - Retroaction *loops* are used between the steps
 ![classical four step structure](/transport_modeling/steps_quetzal_loop_PR_en.png)
 
+# Assignment
+## Optimal Strategies
+
+- *Optimal Strategies* can be established toward the destinations
+- It a set of relevant line to board at each station and associated alighting stations
+- The path is not known beforehand but is built along the journey of the traveler
+- The expected time of arrival is better than the better sequence of lines yielded by the shortest path algorithm run in a frequency-based graph
+- The assignment on each link is derived from the deterministic strategies
+![classical four step structure](/transport_modeling/OS_map.png)
+On this complex example in Dire Dawa (Ethiopia), users start from Misrak Buna in the east and go to Kebele 2 in the west
+Then they wait in Lega Hare, for the 10 or 10bis to stop and board the first one.
+Then, those who board line 10 alight in Legehar and the users of line 10 bis alight in Ashawa.
+Both line 1 and line 22bis stop at Ashawa (first stop) and Legehar. Our users will board the first of these line to stop at their station. 
+Once they are in line 1 or 22bis, they will alight in Bridge to board the line 18 and alight at Jerba Police then walk to their final destination.
+![classical four step structure](/transport_modeling/OS_flowchart.png)
+
+
