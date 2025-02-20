@@ -12,7 +12,7 @@ A complete introduction to the topic can be found in the book that inspired most
 Work in progress
 # Outputs
 Work in progress
-# 4 Step Structure
+# 4 Step Structure | Work In Progress
 Quetzal was inspired by the classical 4 step transport modeling and provides algorithms
 
 - The sequence of the four steps is based on :
@@ -32,7 +32,7 @@ Quetzal was inspired by the classical 4 step transport modeling and provides alg
 - Retroaction *loops* are used between the steps
 ![classical four step structure](/transport_modeling/steps_quetzal_loop_PR_en.png)
 
-# Assignment
+# Assignment | Work In Progress
 ## Optimal Strategies
 - *Optimal Strategies* can be established toward the destinations
 - It a set of relevant line to board at each station and associated alighting stations
@@ -54,3 +54,16 @@ On this complex example in Dire Dawa (Ethiopia):
 - Can be run in public transport subgraphs (pruned graphs) to yield non pareto optimal itineraries 
 - The route choice can be integrated with the mode choice and the time-of-day choice in a nested logit by discretizing the origin-destination matrix in origin-destination-wished departure time matrix
 ![classical four step structure](/transport_modeling/CSA.png)
+## Iterative Pruning Algorithm | Work In Progress
+Quetzal Iterative Pruning approach was inspired by applications such as Google Maps or CityMapper. They yield a broad variety of public transport path.
+The algorithme could be summarized with the following sequence : 
+- Search the best path  
+    -remove a route from the original transit data so that the best path is no longer possible 
+- Search the best path 
+    -remove another route so that neither the best nor the second best are possible 
+- Search the best path 
+    - remove all the buses 
+- Search the best path 
+    - remove the subway and the trains … etc.
+At each iteration only the best path of a transit dataset is returned
+ ![IPA](/transport_modeling/IPA.png)
