@@ -42,7 +42,7 @@ Random origins and destinations are scattered on the network, the Origin-Destina
 The iterative algorithm adjusts the speed on the network and computes the shortest path until the OD times are consistent between the network and the request pool.
 ![alt text](/here/2_HERE_iteration_error.png)  ![alt text](/here/3_HERE_road_calibration.png) 
 To calibrate the roads at a small scale with few requests, OD times are interpolated before the iterative OD to road time algorithm.
-![alt text](/here/4_HERE_OD_prediction_1.png, "OD time prediction") ![alt text](/here/5_HERE_model_calibration.png, "Model Calibration")
+![alt text](/here/4_HERE_OD_prediction_1.png) ![alt text](/here/5_HERE_model_calibration.png)
 The relevancy of the interpolation is monitored
 test
 
