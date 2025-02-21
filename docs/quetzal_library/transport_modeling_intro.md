@@ -3,9 +3,13 @@ layout: doc
 aside: false
 ---
 
-# WORK IN PROGRESS | WIP
-This section is progress, we hope to provide a more comprehensive introduction to static macroscopic transport modeling soon.
-A complete introduction to the topic can be found in the book that inspired most of Quetzal's implementation.
+# WORK IN PROGRESS
+This section is progress, we hope to provide a more comprehensive introduction to modeling with Quetzal soon. 
+Quetzal Library is an opensource python toolbox used to build static macroscopic transport models from scratch. It provides a flexible object model to handle modeling attributes and many algorithms used for demand and assignment models.
+
+We sketch out at broad strokes out in broad strokes the mathematical concepts behind Quetzal's architecture and algorithms. Yet we do not breakdown in detail these concepts and keep the focus on the library itself. 
+
+More details about static macroscopic modeling can be found in the great book that inspired most of Quetzal's implementation.
 *de Dios Ortúzar, J., & Willumsen, L. G. (2024). Modelling transport. John wiley & sons*
 
 # 4 Step Structure | Work In Progress
