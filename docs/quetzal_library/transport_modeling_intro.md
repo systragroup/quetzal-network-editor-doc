@@ -15,7 +15,7 @@ Quetzal was inspired by the classical 4 step transport modeling and provides alg
 - In the *modal split* , the the volume of passenger of each Origin-Destination (OD) pair is split between the available modes.
 - In the *assignment*, the relevant itineraries of each OD pair are enumerated and the users are shared amongst those paths.
 
-::: tip :cloud: A thought on the order of the steps
+::: tip :bird: A thought on the order of the steps
 - The classical sequence of the four steps is based on :
     - Data workflow constraints e.g., the outputs of the generation are used for the distribution
     - Our understanding of the decision process and what is more important to us
