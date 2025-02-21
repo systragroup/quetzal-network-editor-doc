@@ -6,22 +6,24 @@ aside: false
 # WORK IN PROGRESS | WIP
 This section is progress, we hope to provide a more comprehensive introduction to static macroscopic transport modeling soon.
 A complete introduction to the topic can be found in the book that inspired most of Quetzal's implementation.
-
 *de Dios Ortúzar, J., & Willumsen, L. G. (2024). Modelling transport. John wiley & sons*
-# Inputs
-Work in progress
-# Outputs
-Work in progress
+
 # 4 Step Structure | Work In Progress
 Quetzal was inspired by the classical 4 step transport modeling and provides algorithms
+- In the *generation*, zonal data such as number of households and jobs is used to assess the volume of outgoing and ingoing trips of each zone. These trips are respectively called productions and attractions. 
+- In the *distribution*, the productions and attractions are balanced and the destinations of the outgoing trips of each zone are chosen.
+- In the *modal split* , the the volume of passenger of each Origin-Destination (OD) pair is split between the available modes.
+- In the *assignment*, the relevant itineraries of each OD pair are enumerated and the users are shared amongst those paths.
 
-- The sequence of the four steps is based on :
+::: tip :cloud: A thought on the order of the steps
+- The classical sequence of the four steps is based on :
     - Data workflow constraints e.g., the outputs of the generation are used for the distribution
-    - Our understanding of the decision process 
+    - Our understanding of the decision process and what is more important to us
     - A calibration order that minimizes the need for feedbacks and saves time
 - It is flexible though:
     - The travel times generated in the assignment are used in the upstream steps of distribution and modal split
     - Two or more steps can be integrated in order to model our choices more accurately.
+:::
 
 ![classical four step structure](/transport_modeling/steps_en.png)
 
