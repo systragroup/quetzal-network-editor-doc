@@ -295,8 +295,8 @@ Road reversed properties **<u>MUST</u>**  end with _r just like before ex: **spe
 
 variants can be filtered in the edition dialog.
 
-![alt text](variant.png)
+![alt text](/deploy/variant.png)
 
 Every variant can be edited at once while filtering a single property (here 5 variants).
 
-![alt text](variant2.png)
+![alt text](/deploy/variant2.png)
