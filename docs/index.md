@@ -19,17 +19,20 @@ hero:
       link: /deploy/01_prerequisites
 
 features:
-    
+  
   - icon:
       src: /cloud-solid.svg
+      class: theme-icon
     title: Cloud storage and file manager
     details: Access all your projects and scenarios available in on place. Parametrize your simulations and run thenm in parallel with the integrated run manager.
   - title: Network Editor & Microservices
     icon : 
       src: /map-solid.svg
+      class: theme-icon
     details: Easily edit public transport routes and roads and benefit from a comprehensive suite of network tools.
   - icon : 
       src: /images-solid.svg
+      class: theme-icon
     title: Result Maps and Dashboards
     details: Create interactive result maps and illustrated reports.
   - icon : 
