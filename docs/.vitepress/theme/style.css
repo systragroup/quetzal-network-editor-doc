@@ -142,3 +142,11 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/* Icon Theme */
+.theme-icon {
+  filter: brightness(0) saturate(100%) invert(0);
+}
+
+html.dark .theme-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
