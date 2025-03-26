@@ -5,13 +5,13 @@
 
 The aim of this module is to import GTFS (General Transit Feed Specification) data either from a local zip file or download it from an online repository and convert it to Quetzal's own public transport format.
 
-## Zip Importer
+# Zip Importer
 
 Zip importer is the microservice that import GTFS from local GTFS zip file.
 
 ![Alt text](/microservice/import_gtfs.png)
 
-# Uploading GTFS
+## Uploading GTFS
 
 The GTFS uploaded need to be in the classical gtfs form, an exemple is shown on the next picture. This kind of GTFS file is often downloaded from a transport autority website. You can upload as much GTFS zip file as you want to create your public transport network. 
 
@@ -19,7 +19,7 @@ The GTFS uploaded need to be in the classical gtfs form, an exemple is shown on 
 
 ![Alt text](/microservice/upload_gtfs.png)
 
-# Filter
+## Filter
 
 It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. 
 
@@ -29,7 +29,7 @@ You will also have to choose a date inside the date range of the GTFS. This rang
 
 ![Alt text](/microservice/info_gtfs.png)
 
-# Convert 
+## Convert 
 
 Once all the GTFS have been uploaded, and the date and time set for each of them you can clink on convert in order to convert the GTFS to Quetzal's own public transport format.
 
@@ -39,13 +39,13 @@ This will directly display the public transport network of the GTFS uploaded, in
 
 ![Alt text](/microservice/gtfs_import_zip.png)
 
-## Web Importer
+# Web Importer
 
 Web Importer is the microservice that import GTFS from an online repository : https://database.mobilitydata.org/. The public transport network that will be imported will be determined using a polygon.
 
 ![Alt text](/microservice/web_importer_overview.png)
 
-# Polygon 
+## Polygon 
 
 The preset polygon is a rectangle that varies in size depending on the level of zoom.
 If a polygon more specific is needed an option can be choose, for that we need to clink on the icon shown on the next picture.
@@ -60,19 +60,19 @@ It is also possible to choose to use another polygon by importing from your comp
 
 ![Alt text](/microservice/importer_polygon_imp.png)
 
-# Fetch available GTFS 
+## Fetch available GTFS 
 
 Once the polygon is set you can fetch all the available GTFS that exist within the boundary of the polygon. To do so you just need to click on the icon shown in the next picture.
 
 ![Alt text](/microservice/fetch_available_gtfs.png)
 
-# Download GTFS zip file
+## Download GTFS zip file
 
 It is possible to download the GTFS zip file of a specific GTFS, by clicking on the icon shown in the next picture.
 
 ![Alt text](/microservice/download_zip-gtfs.png)
 
-# Filter 
+## Filter 
 
 It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. On the same row you will need to choose the day of the current week you want to import.
 
@@ -88,7 +88,7 @@ To select the gtfs you just need to opt the box shown in the next picture.
 
 ![Alt text](/microservice/select_gtfs.png)
 
-# Convert
+## Convert
 
 Once all the GTFS have been selected, you can clink on download in order to convert the GTFS to Quetzal's own public transport format.
 
