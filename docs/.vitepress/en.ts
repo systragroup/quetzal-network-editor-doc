@@ -51,6 +51,14 @@ export const en = defineConfig({
           ]
         },
         {
+          text: 'Micro services',
+          items: [
+            { text: 'OSM importer', link: '/microservice/01_osm_importer'},
+            { text: 'GTFS importer', link: '/microservice/02_gtfs_importer'},
+  
+          ]
+        },
+        {
           text: 'Infrastructure',
           items: [
             { text: 'Prerequisites', link: '/infra/01_prerequisites' },
