@@ -5,20 +5,20 @@
 
 Matrix Road Caster is a machine learning algorithm used to estimate the average speed on the road links at a given time of the day.
 
-Random origins and destinations are scattered on the network, the Origin-Destination times are requested on the Here or google API for the chosen time of day. The use of this algorithm require to have an api key for either of the service.
+Random origins and destinations are scattered on the network, the Origin-Destination times are requested on the Here or google API for the chosen time of day. The use of this algorithm requires an API key for either of the services.
 
 ![Alt text](/microservice/overview_matrix_road_caster.png)
 
 ## Detailed steps of the algorithm
 
 1. The algorithm is either creating the chosen number of zones (number of zones parameter) using the density of the network to generate zones or you can choose to use your own zoning.
-2. Then we call the Google or Here matrix API, and we select the choosen numer of Origin Destination (**number of OD** parameter) to create random OD. Around 1% of the total OD is often enough (the number of total OD is the number of zones at power 2).
-3. Then using an hybrid machine learning model we interpolate the model OD time from the known time of the API's OD sample.
-4. Then the algorithm ajust the speed on the road network to match the routing time with the OD time using an iterative algorithm.
+2. We call the Google or Here matrix API, and we select the chosen number of Origin-Destination (**number of OD** parameter) to create random OD. Around 1% of the total ODs is often enough (the number of total OD is the number of zones at power 2).
+3. Using an hybrid machine learning model we interpolate the model OD times from the known time of the API's OD sample.
+4. The algorithm adjusts the speed on the road network to match the routing time with the OD time using an iterative algorithm.
 
 ## Api choice
 
-You can choose the API (Application Programming Interface) of Google or Here time. Those API gives the duration of a road travel in between two point. To choose the one you want use the scrollable menu displayed on the next picture.
+You can choose the API (Application Programming Interface) of Google or Here time. these APIs provide the duration of a road travel in between two point. To choose the one you want to use the scrollable menu displayed on the next picture.
 
 ![Alt text](/microservice/API.png)
 
@@ -26,12 +26,12 @@ You can choose the API (Application Programming Interface) of Google or Here tim
 
 ### own zones
 
-If you want use your own centroids to generate the OD that are going to be use to determine the time in the network. To do so click on the **Use zone** button that will allow you to choose on a scrollable menu which input of the model you want to use. The number of zone in this case it is the one of the layer of your choice.
+If you want use your own centroids to generate the OD that are going to be used to determine the time in the network. To do so click on the **Use zone** button , which will allow you to choose from a scrollable menu which input of the model you want to use. The number of zones in this case it is the one of the layer of your choice.
 
 ![Alt text](/microservice/zones_choice.png)
 
 ::: tip 💡 TIP
-You should choose to use your own zones if you think that the density of centroids you use is in accordance with the precision you want for the road network. If there is a lot of centroids in a part of the network, it will be more likely that more test OD will be created here hence a more precise time of the road network in the area. 
+You should choose to use your own zones if you think that the density of centroids you use aligns with the precision you want for the road network. If there is a lot of centroids in a part of the network, it will be more likely that more test OD will be created here hence a more precise time of the road network in the area. 
 :::
 
 ### generated zones
@@ -41,12 +41,12 @@ If you want to generate random zones based on the road network. You will just ha
 ![Alt text](/microservice/number_of_zones.png)
 
 The zones will be generated using a Kmean clustering method, that mean that they will be generated on all the network and more likely around more dense road network.
-The zones created using this methode are displayed after the scripts runs with the name  **1_HERE_zones_centroids.png**.
+The zones created using this method are displayed after the scripts runs with the name  **1_HERE_zones_centroids.png**.
 
 ![Alt text](/microservice/1_HERE_zones_centroids.png)
 
 ::: tip 💡 TIP
-The number of zone you choose to create will determine the precision of the Matrix road caster but more zones means more OD you need to to generate. Indeed, you will need to fetch from the API around 1% of the total OD of the model for a good precision. For 100 zones it mean you will need 100 OD, but for 200 zones you will need 400. As the number of free request per API is generally limited this can be a limiting factor.
+The number of zones you choose to create will determine the precision of the Matrix road caster but more zones means more OD you need to to generate. Indeed, you will need to fetch from the API around 1% of the total OD of the model for good precision. For 100 zones it mean you will need 100 OD, but for 200 zones you will need 400. As the number of free request per API is generally limited this can be a limiting factor.
 :::
 
 ## Date time 
@@ -56,7 +56,7 @@ You can choose the date and time that will be used to go fetch the data of the A
 ![Alt text](/microservice/date_time_MRC.png)
 
 ::: warning Important
-The date should be in the futur for the google API and in the past for the Here API.
+The date should be in the future for the google API and in the past for the Here API.
 :::
 
 ## Freeflow time on road
@@ -81,7 +81,7 @@ or **4_HERE_speed_prediction** shown on the next picture.
 
 ![Alt text](/microservice/4_HERE_speed_prediction_1.png)
 
-They will be a generation of those two outpout for the number of OD chosen.
+They will be a generation of those two outputs for the number of OD chosen.
 
 ## API key
 
@@ -99,7 +99,7 @@ This will generate two new columns in the road link layer, the columns **here_sp
 
 ![Alt text](/microservice/here_speed.png)
 
-It wil also generate Calibration figures that can be used to estimate the precision of the estimation and the calibration needed by the road network.
+It wil also generate calibration figures that can be used to estimate the precision of the estimation and the calibration needed by the road network.
 
 ## Calibration figure
 
@@ -128,6 +128,6 @@ The same is done for the routing to determine the speed of the different road li
 
 ### Model calibration
 
-The precision of the interpolation is access using a sample of the ODs to monitor if the predicted OD times are close of the ones of the API.
+The precision of the interpolation is assessed using a sample of the ODs to monitor if the predicted OD times are close of the ones of the API.
 
 ![Alt text](/microservice/5_HERE_model_calibration.png)

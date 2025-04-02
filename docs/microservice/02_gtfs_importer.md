@@ -7,15 +7,15 @@ The aim of this module is to import GTFS (General Transit Feed Specification) da
 
 # Zip Importer
 
-Zip importer is the microservice that import GTFS from local GTFS zip file.
+Zip importer is the microservice that imports GTFS from local GTFS zip file.
 
 ![Alt text](/microservice/import_gtfs.png)
 
 ## Uploading GTFS
 
-The GTFS uploaded need to be in the classical gtfs form, an exemple is shown on the next picture. This kind of GTFS file is often downloaded from a transport autority website. You can upload as much GTFS zip file as you want to create your public transport network. 
+The GTFS uploaded needs to be in the classical gtfs form, an example is shown on the next picture. This kind of GTFS file is often downloaded from a transport autority website. You can upload as much GTFS zip file as you want to create your public transport network. 
 
-![Alt text](/microservice/exemple_gtfs.png)
+![Alt text](/microservice/example_gtfs.png)
 
 ![Alt text](/microservice/upload_gtfs.png)
 
@@ -31,7 +31,7 @@ You will also have to choose a date inside the date range of the GTFS. This rang
 
 ## Convert 
 
-Once all the GTFS have been uploaded, and the date and time set for each of them you can clink on **convert** in order to convert the GTFS to Quetzal's own public transport format.
+Once all the GTFS have been uploaded, and the date and time set for each of them you can click on **convert** in order to convert the GTFS to Quetzal's own public transport format.
 
 ![Alt text](/microservice/convert_gtfs_zip.png)
 
@@ -41,22 +41,22 @@ This will directly display the public transport network of the GTFS uploaded, in
 
 # Web Importer
 
-Web Importer is the microservice that import GTFS from an online repository : https://database.mobilitydata.org/. The public transport network that will be imported will be determined using a polygon.
+Web Importer is the microservice that imports GTFS from an online repository : https://database.mobilitydata.org/. The public transport network that will be imported will be determined using a polygon.
 
 ![Alt text](/microservice/web_importer_overview.png)
 
 ## Polygon 
 
 The preset polygon is a rectangle that varies in size depending on the level of zoom.
-If a polygon more specific is needed an option can be choose, for that we need to clink on the icon shown on the next picture.
+If a polygon more specific is needed an option can be choose, for that we need to click on the icon shown on the next picture.
 
 ![Alt text](/microservice/importer_polygon_icon.png)
 
-Once it is done, it is possible to moove the differents nodes of the polygon by draging them. It is also possible to add new nodes by left-clicking. The nodes can also be deleted by righ-clicking on them.
+Once it is done, it is possible to move the differents nodes of the polygon by dragging them. It is also possible to add new nodes by left-clicking. The nodes can also be deleted by right-clicking on them.
 
 ![Alt text](/microservice/node_polygon_gtfs.png)
 
-It is also possible to choose to use another polygon by importing from your computer a geojson file projected in epsg 4326 (the geometry must be a polygon), for that you need to clink on the icon shown in the next picture.
+It is also possible to choose to use another polygon by importing a GeoJSON file projected in EPSG 4326 (the geometry must be a polygon), for that you need to click on the icon shown in the next picture.
 
 ![Alt text](/microservice/importer_polygon_imp.png)
 
@@ -79,18 +79,18 @@ It is possible to filter the time period of the GTFS that will be used. Only the
 ![Alt text](/microservice/data_time_gtfs_importer.png)
 
 You can also pick which GTFS you want to import. To help the decision the different columns give information about the GTFS:
-- If is network is entierely inside the displayed polygone (**All in polygon**)
+- If the network is entirely insidethe displayed polygone (**All in polygon**)
 - The code of the country of the GTFS (**Code**)
 - The city that generate the GTFS (**City**)
 - The transport agency that generate the GTFS (**Agency**)
 
-To select the gtfs you just need to opt the box shown in the next picture.
+To select the GTFS you just need to check the box shown in the next picture.
 
 ![Alt text](/microservice/select_gtfs.png)
 
 ## Convert
 
-Once all the GTFS have been selected, you can clink on **download** in order to convert the GTFS to Quetzal's own public transport format.
+Once all the GTFS have been selected, you can click on **download** in order to convert the GTFS to Quetzal's own public transport format.
 
 ![Alt text](/microservice/download_gtfs.png)
 
