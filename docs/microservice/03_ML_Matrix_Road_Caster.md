@@ -5,7 +5,7 @@
 
 Matrix Road Caster is a machine learning algorithm used to estimate the average speed on the road links at a given time of the day.
 
-Random origins and destinations are scattered on the network, the Origin-Destination times are requested on the Here or google API for the chosen time of day. The use of this algorithm requires an API key for either of the services.
+Random origins and destinations are scattered on the network, the Origin-Destination times are requested on the Here or Google API for the chosen time of day. The use of this algorithm requires an API key for either of the services.
 
 ![Alt text](/microservice/overview_matrix_road_caster.png)
 
@@ -16,7 +16,7 @@ Random origins and destinations are scattered on the network, the Origin-Destina
 3. Using an hybrid machine learning model we interpolate the model OD times from the known time of the API's OD sample.
 4. The algorithm adjusts the speed on the road network to match the routing time with the OD time using an iterative algorithm.
 
-## Api choice
+## API choice
 
 You can choose the API (Application Programming Interface) of Google or Here time. these APIs provide the duration of a road travel in between two point. To choose the one you want to use the scrollable menu displayed on the next picture.
 
@@ -56,7 +56,7 @@ You can choose the date and time that will be used to go fetch the data of the A
 ![Alt text](/microservice/date_time_MRC.png)
 
 ::: warning Important
-The date should be in the future for the google API and in the past for the Here API.
+The date should be in the future for the Google API and in the past for the Here API.
 :::
 
 ## Freeflow time on road
@@ -85,17 +85,17 @@ They will be a generation of those two outputs for the number of OD chosen.
 
 ## API key
 
-You will need an API key either from google or Here to import the set of OD that will allow the calibration. It is possible to create free acount on each platform to create this key. 
+You will need an API key either from Google or Here to import the set of OD that will allow the calibration. It is possible to create free acount on each platform to create this key. 
 
-![Alt text](/microservice/api_key.png)
+![Alt text](/microservice/API_key.png)
 
 ##  Process
 
-Once every parameter have been chosen you can clink on process in order to lauch the algorithm.
+Once every parameter have been chosen you can click on process in order to lauch the algorithm.
 
 ![Alt text](/microservice/process.png)
 
-This will generate two new columns in the road link layer, the columns **here_speed** and **here_time**, even if it was google that was used.
+This will generate two new columns in the road link layer, the columns **here_speed** and **here_time**, even if it was Google that was used.
 
 ![Alt text](/microservice/here_speed.png)
 
