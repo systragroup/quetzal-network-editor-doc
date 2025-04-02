@@ -15,7 +15,7 @@ Zip importer is the microservice that imports GTFS from local GTFS zip file.
 
 The GTFS uploaded needs to be in the classical gtfs form, an example is shown on the next picture. This kind of GTFS file is often downloaded from a transport autority website. You can upload as much GTFS zip file as you want to create your public transport network. 
 
-![Alt text](/microservice/example_gtfs.png)
+![Alt text](/microservice/exemple_gtfs.png)
 
 ![Alt text](/microservice/upload_gtfs.png)
 
