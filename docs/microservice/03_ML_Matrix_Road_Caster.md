@@ -119,11 +119,11 @@ This figure show the correlation between the road link time obtained using the r
 
 One or several random OD are picked from the calculated OD set ( depending on **number of OD to plot**), to check if the API ODs that has been used to determine the time of this/those calculated OD. The red ligne is the iterpolated OD and the orange ones are the API ODs.
 
-![Alt text](/microservice/4_HERE_OD_prediction.png)
+![Alt text](/microservice/4_HERE_OD_prediction_1.png)
 
 The same is done for the routing to determine the speed of the different road links used to go from the origin to the destination.
 
-![Alt text](/microservice/4_HERE_speed_prediction.png)
+![Alt text](/microservice/4_HERE_speed_prediction_1.png)
 
 
 ### Model calibration
