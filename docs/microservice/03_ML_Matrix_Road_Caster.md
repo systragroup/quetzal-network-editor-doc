@@ -87,7 +87,7 @@ They will be a generation of those two outputs for the number of OD chosen.
 
 You will need an API key either from Google or Here to import the set of OD that will allow the calibration. It is possible to create free acount on each platform to create this key. 
 
-![Alt text](/microservice/API_key.png)
+![Alt text](/microservice/api_key.png)
 
 ##  Process
 
