@@ -25,17 +25,17 @@ It is possible to filter the time period of the GTFS that will be used. Only the
 
 ![Alt text](/microservice/time_gtfs.png)
 
-You will also have to choose a date inside the date range of the GTFS. This range is displayed in the from and to columns. A selected date is preset but can be changed.
+You will also have to choose a date inside the date range of the GTFS. This range is displayed in the **from** and **to** columns. A selected date is preset but can be changed.
 
 ![Alt text](/microservice/info_gtfs.png)
 
 ## Convert 
 
-Once all the GTFS have been uploaded, and the date and time set for each of them you can clink on convert in order to convert the GTFS to Quetzal's own public transport format.
+Once all the GTFS have been uploaded, and the date and time set for each of them you can clink on **convert** in order to convert the GTFS to Quetzal's own public transport format.
 
 ![Alt text](/microservice/convert_gtfs_zip.png)
 
-This will directly display the public transport network of the GTFS uploaded, in the Quetzal format and for the date and time choosen.
+This will directly display the public transport network of the GTFS uploaded, in the Quetzal format and for the date and time chosen.
 
 ![Alt text](/microservice/gtfs_import_zip.png)
 
@@ -74,15 +74,15 @@ It is possible to download the GTFS zip file of a specific GTFS, by clicking on 
 
 ## Filter 
 
-It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. On the same row you will need to choose the day of the current week you want to import.
+It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. On the same row you will need to choose the day of the week you want to import.
 
 ![Alt text](/microservice/data_time_gtfs_importer.png)
 
 You can also pick which GTFS you want to import. To help the decision the different columns give information about the GTFS:
-- If is network is entierely inside the displayed polygone (All in polygon)
-- The code of the country of the GTFS (Code)
-- The city that generate the GTFS (City)
-- The transport agency that generate the GTFS (Agency)
+- If is network is entierely inside the displayed polygone (**All in polygon**)
+- The code of the country of the GTFS (**Code**)
+- The city that generate the GTFS (**City**)
+- The transport agency that generate the GTFS (**Agency**)
 
 To select the gtfs you just need to opt the box shown in the next picture.
 
@@ -90,10 +90,10 @@ To select the gtfs you just need to opt the box shown in the next picture.
 
 ## Convert
 
-Once all the GTFS have been selected, you can clink on download in order to convert the GTFS to Quetzal's own public transport format.
+Once all the GTFS have been selected, you can clink on **download** in order to convert the GTFS to Quetzal's own public transport format.
 
 ![Alt text](/microservice/download_gtfs.png)
 
-This will directly display the public transport network of the GTFS uploaded, in the Quetzal format and for the date and time choosen.
+This will directly display the public transport network of the GTFS uploaded, in the Quetzal format and for the date and time chosen.
 
 ![Alt text](/microservice/gtfs_display_web.png)

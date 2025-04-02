@@ -32,13 +32,13 @@ It is possible to choose which kind of road links (motorway, primary, secondary,
 
 ## Extended cycleway
 
-The information about the bike network on the road link comme by default as 3 columns ["yes","no","shared"], if the option extended cycleway is choosen columns are added to give more information about the bike network.
+The information about the bike network on the road link comme by default as 3 columns ["yes","no","shared"], if the option **extended cycleway** is choosen columns are added to give more information about the bike network.
 
 ![Alt text](/microservice/extended_cycleway.png)
 
 ## Download the osm network
 
-When all the filter previously explained have been choosen, you click on download to create your road network.
+When all the filter previously explained have been choosen, you have to click on **download** to create your road network.
 
 ![Alt text](/microservice/download_osm.png)
 
