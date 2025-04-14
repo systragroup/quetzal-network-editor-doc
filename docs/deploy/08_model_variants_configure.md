@@ -124,7 +124,7 @@ it is possible to pass only one variant or none to the Parallel Iterator. if non
 ```python [notebook argv]
 import sys
 import json
-1. default = {'scenario': 'base', 'period': 'AM', 'training_folder': '../..'} #[!code highlight]
+default = {'scenario': 'base', 'period': 'AM', 'training_folder': '../..'} #[!code highlight]
 manual, argv = (True, default) if 'ipykernel' in sys.argv[0] else (False, dict(default, **json.loads(sys.argv[1])))
 ```
 :::
