@@ -26,7 +26,7 @@ the [step function](03_model_deploy.html#step-functions-json) defines which note
 
 The reccomanded file structure for a model is display bellow. It contains **scenarios** folder to mimic the scenario structure we will have on the cloud.
 
-```
+```kotlin
 .
 ├─ inputs
 │  ├─ calibration
@@ -78,7 +78,8 @@ We use the same file structure for the **local developpement** and the **deploye
  it is the exact same structured found when we export a scenario into a **.zip** file in the web app.
 :::
 
-```
+```kotlin
+.
 ├─ base
 |  ├─ inputs
 |  |  ├─ pt                 <-- PT network editable in the app  // [!code highlight]
@@ -87,7 +88,7 @@ We use the same file structure for the **local developpement** and the **deploye
 |  |  ├─ road               <-- road network editable in the app // [!code highlight]
 |  |  |  ├─ road_links.geojson
 |  |  │  └─ road_nodes.geojson
-|  |  ├─ od                 <-- OD's editable in the app // [!code highlight]
+|  |  ├─ od                 <-- ODs editable in the app // [!code highlight]
 |  |  │  └─ od.geojson
 |  |  ├─ params.json        <-- editable parameters for the model // [!code highlight]
 |  │  └─ ...
@@ -103,7 +104,7 @@ We use the same file structure for the **local developpement** and the **deploye
 Any other files will be store in the Docker container with **Quetzal**, the **notebooks** and the **python** librairies.
 We are generally talking about the **inputs folder**.
 
-```
+```kotlin
 .
 ├─ inputs
 │  ├─ calibration
@@ -131,7 +132,8 @@ When running a scenario on the cloud platform. The files of the selected scenari
 ::: danger Editable Files coming from the selected scenario on the Database (S3)
 :::
 
-```
+```kotlin
+.
 ├─ inputs
 │  ├─ calibration  // [!code warning] 
 │  |  └─ ...      // [!code warning]
@@ -202,20 +204,35 @@ output_folder = os.path.join(training_folder, local_scen_path, 'outputs/')
 
 If locally or on the cloud (lambda). the paths will differ
 
-|         |      Local      |  Cloud |
-| ------------- | :-----------: | ----: |
-| input_folder         | ../../inputs/                 | ../../inputs/ |
-| scenario_folder      | ../../scenarios/base/inputs/  | ../../inputs/ |
-| model_folder         | ../../scenarios/base/model/   | ../../model/   |
-| output_folder        | ../../scenarios/base/outputs/ | ../../outputs/ |
+|                 |             Local             |          Cloud |
+|-----------------|:-----------------------------:|---------------:|
+| input_folder    |         ../../inputs/         |  ../../inputs/ |
+| scenario_folder | ../../scenarios/base/inputs/  |  ../../inputs/ |
+| model_folder    |  ../../scenarios/base/model/  |   ../../model/ |
+| output_folder   | ../../scenarios/base/outputs/ | ../../outputs/ |
 
 
 Finally. The parameters in the web interfaces are passed through the **argv**. You can update the parameters.xlsx like this:
 
 ```python
-var = excel.read_var(file=input_folder+'parameters.xlsx', scenario=scenario, return_ancestry=False)
+var = excel.read_var(file=os.path.join(input_folder, 'parameters.xlsx'), 
+                     scenario=scenario, 
+                     return_ancestry=False)
 if 'params' in argv.keys():
     var.update(pd.DataFrame.from_dict(argv['params'], orient="index").stack())
+```
+
+ or with periods
+
+```python
+from quetzal.io.quenedi import read_parameters
+var = excel.read_var(file=os.path.join(input_folder, 'parameters.xlsx'), 
+                     scenario=scenario, 
+                     period=period,
+                     return_ancestry=False)
+if 'params' in argv.keys():
+	params = read_parameters(argv['params'], period=period)
+	var.update(params)
 ```
 
 ::: tip

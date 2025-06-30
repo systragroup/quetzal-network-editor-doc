@@ -101,7 +101,7 @@ Here we have an example of all possible parameters into a single "general" categ
 
 you can lock any scenario simply by adding a **.lock** empty file at the root dir of the project
 
-```
+```kotlin
 ├─ inputs
 |  ├─ pt           
 |  |  ├─ links.geojson 
@@ -131,7 +131,7 @@ in the root dir of a project. you can add "attributesChoices.json" This gives ch
 ex:
 
 
-```
+```kotlin
 ├─ inputs
 |  ├─ pt           
 |  |  ├─ links.geojson 
