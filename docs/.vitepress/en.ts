@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+import { version } from '../../package.json'
 // https://vitepress.dev/reference/site-config
 export const en = defineConfig({
   description: "doc",
@@ -12,7 +12,8 @@ export const en = defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Overview', link: '/00_overview' }
+      { text: 'Overview', link: '/00_overview' },
+      { text: version, link: '#' } // version badge
     ],
 
     sidebar: [
@@ -38,6 +39,16 @@ export const en = defineConfig({
         ]
       },
       {
+        text: 'Micro services',
+        items: [
+          { text: 'OSM importer', link: '/microservice/01_osm_importer' },
+          { text: 'GTFS importer', link: '/microservice/02_gtfs_importer' },
+          { text: 'Matrix road caster', link: '/microservice/03_ML_Matrix_Road_Caster' },
+          { text: 'Mapmatching', link: '/microservice/04_Mapmatching' },
+
+        ]
+      },
+      {
         text: 'How to Deploy a Model',
         items: [
           { text: 'Prerequisites', link: '/deploy/01_prerequisites' },
@@ -48,16 +59,6 @@ export const en = defineConfig({
           { text: 'Model Maintenance', link: '/deploy/06_model_maintenance' },
           { text: 'Advanced configuration', link: '/deploy/07_model_configure_advanced' },
           { text: 'Variants configuration', link: '/deploy/08_model_variants_configure' },
-
-        ]
-      },
-      {
-        text: 'Micro services',
-        items: [
-          { text: 'OSM importer', link: '/microservice/01_osm_importer' },
-          { text: 'GTFS importer', link: '/microservice/02_gtfs_importer' },
-          { text: 'Matrix road caster', link: '/microservice/03_ML_Matrix_Road_Caster' },
-          { text: 'Mapmatching', link: '/microservice/04_Mapmatching' },
 
         ]
       },

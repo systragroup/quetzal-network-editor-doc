@@ -17,7 +17,7 @@ Quetzal Cloud provides a graphical interface to manage your projects stored in t
 
 ![Alt text](/other/load_project_0.png)
 
-## Microeservices
+## Microservices
 The micro services provide robust automated processing to make the best of the road and public transport network data.
 ### OpenStreetMap importer (OSM importer)
 Import a road network from Open Street Map, clean it and convert it to Quetzal's light road network format.

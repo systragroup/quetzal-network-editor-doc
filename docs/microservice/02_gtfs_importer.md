@@ -1,3 +1,6 @@
+---
+outline: deep
+---
 
 # GTFS importer
 
@@ -19,11 +22,22 @@ The GTFS uploaded needs to be in the classical gtfs form, an example is shown on
 
 ![Alt text](/microservice/upload_gtfs.png)
 
-## Filter
+## Filters
+
+### time
 
 It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. 
 
 ![Alt text](/microservice/time_gtfs.png)
+
+### Periods
+
+You can import GTFS over multiple time periods with unique names over 24 hours. This will output a single network with Headway#AM = 0 when a trip have no service in AM for example
+[see variant configuration](../deploy/08_model_variants_configure#network)
+
+![Alt text](/microservice/periods_gtfs.png)
+
+### Date
 
 You will also have to choose a date inside the date range of the GTFS. This range is displayed in the **from** and **to** columns. A selected date is preset but can be changed.
 
@@ -72,14 +86,17 @@ It is possible to download the GTFS zip file of a specific GTFS, by clicking on 
 
 ![Alt text](/microservice/download_zip-gtfs.png)
 
-## Filter 
+## Filters (web)
 
-It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported. On the same row you will need to choose the day of the week you want to import.
+It is possible to filter the time period of the GTFS that will be used. Only the trips having at least one stop during the time range, will be imported.  [see filters for more information](#Filters)
+
+* you will need to choose the day of the week you want to import.
 
 ![Alt text](/microservice/data_time_gtfs_importer.png)
 
+
 You can also pick which GTFS you want to import. To help the decision the different columns give information about the GTFS:
-- If the network is entirely insidethe displayed polygone (**All in polygon**)
+- If the network is entirely inside the displayed polygone (**All in polygon**)
 - The code of the country of the GTFS (**Code**)
 - The city that generate the GTFS (**City**)
 - The transport agency that generate the GTFS (**Agency**)
@@ -88,7 +105,7 @@ To select the GTFS you just need to check the box shown in the next picture.
 
 ![Alt text](/microservice/select_gtfs.png)
 
-## Convert
+## Download
 
 Once all the GTFS have been selected, you can click on **download** in order to convert the GTFS to Quetzal's own public transport format.
 

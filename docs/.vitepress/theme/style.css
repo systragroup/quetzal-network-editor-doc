@@ -150,3 +150,11 @@
 html.dark .theme-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }
+
+/* .VPDoc .aside{
+  max-width:200px
+} */
+
+.VPDoc.has-aside .content-container[data-v-10119189] {
+    max-width: 100%;
+}
