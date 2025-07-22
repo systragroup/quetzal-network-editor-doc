@@ -155,6 +155,6 @@ html.dark .theme-icon {
   max-width:200px
 } */
 
-.VPDoc.has-aside .content-container[data-v-10119189] {
-    max-width: 100%;
+.VPDoc.has-aside .content-container {
+    max-width: 90% !important;
 }
