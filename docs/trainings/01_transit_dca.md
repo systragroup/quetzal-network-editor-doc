@@ -26,7 +26,7 @@ The following are the inputs required for the model to run its calculations and 
     * Downloaded directly from OpenStreetMap database through the OSM import microservice for a chosen area. 
     * Uploaded directly from your computer
     
-    In this documentation, please refer to section **How to use the interface / Download Network** for more detail on how to upload road networks and section **How to use the Interface / Edit roads** for more detail on how to edit road networks.
+    In this documentation, please refer to [this section](https://systragroup.github.io/quetzal-network-editor-doc/howto/04_download_network.html) for more detail on how to upload road networks and  [this section](https://systragroup.github.io/quetzal-network-editor-doc/howto/04_road_network.html) for more detail on how to edit road networks.
 
 * **OD matrix** *(optional)*: For additional results regarding modal share estimations and flow estimates, you can provide an OD matrix in geojson format. The requirements in terms of format are as follows:
 
@@ -86,7 +86,7 @@ To enrich the analyses, you can add additional properties of the lines. To do so
 
 The properties you can add are the following:
 
-* **Catchment radius**: for catchment to be computed, you also need to provide a zonage.geosjon file in the scenario's inputs (see section 03_load_project).
+* **Catchment radius**: for catchment to be computed, you also need to provide a zonage.geosjon file in the scenario's inputs (see section **Scenario inputs** above).
     * ***catchment_radius***: distance to the network used to compute network/line/station coverage (in meters). You may introduce several catchment radii to assess coverage for different access modes (people reaching the transport network by walking, biking, driving...). To do so, create different properties and name them *catchment_radius_mode1*, *catchment_radius_mode2*... , where *mode1*, *mode2* should be replaced by the modes you wish to model (walk, bike, car...). Default value *catchment_radius* = 500m will be used if no value is set.
 
 * **Service hours**: 
@@ -133,7 +133,7 @@ For bus lines, you may have to adjust a litle bit the return line to avoid one w
 
 ### Import lines through the GTFS importer micro-service
 
-You can also use the GTFS importer micro-service to import public transport networks from GTFS files, from your computer or directly from the online open mobilitydata database. See documentation under the **Micro services / GTFS importer** section of this documentation.
+You can also use the GTFS importer micro-service to import public transport networks from GTFS files, from your computer or directly from the online open mobilitydata database. See micro-service documentation [here](https://systragroup.github.io/quetzal-network-editor-doc/microservice/02_gtfs_importer.html).
 
 To ensure the calculations are successfully carried out, you must add the desired properties (among those mentioned in the **Create a new line** section above) to the imported lines. To do so, see the **Edit line properties** below.
 
@@ -168,11 +168,11 @@ With this option, the other public transport stops are displayed. When you edit 
 
 ##### Follow Roads
 
-With this option, the geometry of your line will follow the roads network (if provided; see sections **How to use the interface / Load a project** for more information on how to download road network) between all the new stops you add.
+With this option, the geometry of your line will follow the roads network (if provided; see [documentation](https://systragroup.github.io/quetzal-network-editor-doc/howto/04_download_network.html) for more information on how to download road network) between all the new stops you add.
 
 You can also click on *ALL* or *NONE* to map all your line to the road network or revert to straight lines (none).
 
-For lines using this option, speed will be recomputed during calculations using road network speed. To refine road network speed, you can use the *Matrix Road Caster* micro-service. See the **Micro services / Matrix road caster** for more information about how to use the
+For lines using this option, speed will be recomputed during calculations using road network speed. To refine road network speed, you can use the *Matrix Road Caster* micro-service. See the [micro-service documentation](https://systragroup.github.io/quetzal-network-editor-doc/microservice/03_ML_Matrix_Road_Caster.html) for more information about how to use the
 
 ### Edit Links and Nodes Properties
 While editing a line, you can right click on a link to edit its propoerties. You can also do the same on a node to edit its properties, for example to give names to nodes. 
@@ -205,7 +205,7 @@ When creating a new trip, specify a start time. The travel times from the links 
 
 ## Results
 
-Once run, the simulation results in two types of outputs (for more guidance about model simulation, see section **How to use the interface / Run a simulation** of this documentation):
+Once run, the simulation results in two types of outputs (for more guidance about model simulation, see [documentation](https://systragroup.github.io/quetzal-network-editor-doc/howto/05_run_simulation.html)):
 
 * Chart-type outputs, containing information about lines, trips, stops...
 * GIS layers, allowing to visualize the results contained in the chart outputs on the map.
@@ -239,4 +239,4 @@ In the settings section (gear icon in the top-right-hand corner), you can chose 
 
 ### Edit map styles and result layers
 
-For more info on map styles edition and export, check out section **How to use the Interface / Explore the results** of the documentation documentation. 
+For more info on map styles edition and export, check out the [documentation](https://systragroup.github.io/quetzal-network-editor-doc/howto/06_results.html). 
