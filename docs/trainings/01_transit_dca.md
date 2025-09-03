@@ -1,3 +1,52 @@
+# Introduction
+
+**Transit-DCA** is a model developped to calculate key indicators for transport networks, sch as network coverage, operating costs, necessary fleet size per line, vehicle.kilometers, using easily accessible input data. It provides an initial overview of a network's performances and offers ways to visualize results on a map, making quantitative data easy to comprehend and interpret.
+
+To create or open a TRANSIT-DCA project, ensure that the TRANSIT-DCA model is selected in the Input tab.
+
+![Alt text](transit_dca/load_project_1.png)
+
+# Scenario inputs
+
+To initialize your project, you need to provide inputs in the Inputs tab.
+The following are the inputs required for the model to run its calculations and analyses, resulting in the outputs you receive. The level of detail of the outputs depend on the different inputs you provide:
+
+* **PT network** *(mandatory)*: Public transport network, links and nodes. There are different ways to generate it:
+    * By drawing it directly in the platform (under the Maps tab)
+    * By downloading it from a GTFS from the open-source mobilitydata database directly in the app using the GTFS importer micro-service.
+    * By uploading it from your computer (pt links and nodes are required to be stored in two seperate geojson files)
+
+    See section 04_pt_network for more detail on how to upload and edit PT networks, and on different properties to fill when defining the lines to compute indicators.
+
+* **Paramaters** *(mandatory)*: Json file providing simulation parameters. You can modify the parameters in the Simulation Tab.
+
+* **Road network** *(optional)*: Road network, links and nodes. Providing a road network is optional; however, including it can significantly enhance your analysis, especially if your model incorporates public transport modes that utilize the road network (bus, express bus) by allowing to create bus lines that follow actual roads and adapt their speed. Road network can be:
+    * Downloaded directly from OpenStreetMap database through the OSM import microservice for a chosen area. 
+    * Uploaded directly from your computer
+    
+    In this documentation, please refer to section **How to use the interface / Download Network** for more detail on how to upload road networks and section **How to use the Interface / Edit roads** for more detail on how to edit road networks.
+
+* **OD matrix** *(optional)*: For additional results regarding modal share estimations and flow estimates, you can provide an OD matrix in geojson format. The requirements in terms of format are as follows:
+
+    * "geometry": LineStrings origin (first point) to destination (last point)
+    * "origin": origin point id (will be atributed to the position of the first point of the linestring geometry)
+    * "destination": destination point id (will be attributed to the position of the first point of the linestring geometry)
+    * "volume": volume field
+
+    Load the file in the OD Matrix section of the inputs tab. Alternatively, you can draw the OD-matrix in the OD subsection under the Maps tab.
+
+* **Zonage** *(optional)*: file containing socio-economical data and used to compute network, line and station coverage indicators. To compute coverage, you must provide a zoning file named zonage.geojson. Here is the main information it must include:
+
+    * "geometry": column giving zone shapes (crs 4326)
+    * "population_density", "jobs_density"... : Densities for each item whose catchment should be computed (item1, item2...) in the format item1_density, item2_density... expressed in item/km². Relevant items include population, jobs, medical facilities...
+
+    For population and jobs, a zoning file can be easily generated from a SYSMAP export, using the script hosted here: 
+    [Snippet](https://gitlab.com/systra/dca/python-snippets/-/snippets/4840233)
+
+    Once your zoning file is ready, load it into the additional inputs section under the inputs tab.
+
+* **Style requirements** *(optional)*: Defines the symbology of the output GIS layers. You can download style requirements from a TRANSIT-DCA project and reuse them in your own project.
+
 # Public Transport Network
 
 Public transport network can 
@@ -5,13 +54,13 @@ Public transport network can
     * imported using GTFS format via the GTFS importer micro-service (see section **Import lines through the GTFS importer micro-service**)
     * simply imported via a ZIP file of a pre-existing road network under the Import tab
 
-![Alt text](images/pt_network_1.png)
+![Alt text](transit_dca/pt_network_1.png)
 
 ## Create a new line in the Public Transport Editor
 
 In order to add a new line, open the Map tab, click on the **NEW LINE** button. Then, fill in the properties of the new line. You may want to give it a name, a short name and a route type (such as bus or subway). Then, hit the **SAVE** button.
 
-![Alt text](images/pt_network_3.png)
+![Alt text](transit_dca/pt_network_3.png)
 
 ### Mandatory line properties
 
@@ -30,7 +79,7 @@ For calculations to run successfully, you must ensure the following line propert
 
 To enrich the analyses, you can add additional properties of the lines. To do so, scroll all the way down through the list of line properties, enter the name of your new field in the **add field** section, then hit the "+" symbol on the right. 
 
-![Alt text](images/pt_network_4.gif)
+![Alt text](transit_dca/pt_network_4.gif)
 
 The properties you can add are the following:
 
@@ -65,17 +114,17 @@ Alternatively, after creating your line, you will be able to define its time sch
 
 Once your line is initialized, click anywhere on the the map to start drawing. Stop drawing with a right click anywhere on the map. Once the line is complete, hit the **CONFIRM** button to save it, you can always edit the properties and the itinerary of your line later.
 
-![Alt text](images/pt_network_5.gif)
+![Alt text](transit_dca/pt_network_5.gif)
 
 You can add a stop in the middle of a line with a left click on a link. You can also cut the line with a right click on a node > **CUT BEFORE NODE** or **CUT AFTER NODE**. 
 
-![Alt text](images/pt_network_6.gif)
+![Alt text](transit_dca/pt_network_6.gif)
 
 Once you have created a line for one direction, you can duplicate it and reverse it to create the return line. TO do so, click the **duplcate** icon in the list of lines and select **reverse**. Update the **New name** field to the desired trip_id of the new trip by matching the direction_id. If the trip you duplicated has its trip_id set to *A_0*, the trip_id of the return trip should be set to *A_1*.
 
 For bus lines, you may have to adjust a litle bit the return line to avoid one way roads. To create bus stops on different sides of a road or create different routes for different directions, you must select the **duplicate nodes** option.
 
-![Alt text](images/pt_network_7.gif)
+![Alt text](transit_dca/pt_network_7.gif)
 
 ## Import lines through the GTFS importer micro-service
 
@@ -91,7 +140,7 @@ To edit the itinerary of a line, find it in the left pannel and click on its nam
 
 Alternatively, you can hover over the map and right-click on your line. If multiple lines are overlaid, a popup will open, allowing you to choose which line you want to edit.
 
-![Alt text](images/pt_network_10.gif)
+![Alt text](transit_dca/pt_network_10.gif)
 
 ### Editor Options
 
@@ -101,8 +150,8 @@ By default, when creating or editing a line, the geometry is created «as the cr
 * Stick Nodes on Existing Nodes
 * Follow Roads
 
-![Alt text](images/pt_network_11.png)
-![Alt text](images/pt_network_12.png)
+![Alt text](transit_dca/pt_network_11.png)
+![Alt text](transit_dca/pt_network_12.png)
 
 #### Edit Line Geometry
 
@@ -127,13 +176,13 @@ While editing a line, you can right click on a link to edit its propoerties. You
 
 If you click on **EDIT PROPERTIES** in the side panel, you will edit the properties of all the links of your line (or selected group). It is relevant for the headway, catchment radii, rolling stock capacity for instance or if you want to set a constant speed on all the line. 
 
-![Alt text](images/pt_network_13.gif)
+![Alt text](transit_dca/pt_network_13.gif)
 
 ## Create or Edit a Schedule
 
 By default, new lines are frequency-based, defined by the headway in the line properties. You can convert any line to be schedule-based by selecting **CREATE SCHEDULE** in the **EDIT PROPERTIES** form.
 
-![Alt text](images/pt_network_14.png)
+![Alt text](transit_dca/pt_network_14.png)
 
 When creating a schedule, a single trip is generated with a starting time of **08:00:00**, travel times based on links *time*, and a default dwell time of 0 seconds. In the **departures** section on the right-hand side, you can see the departure times from each station of the line for the trip. In the **arrivals** section, you can see the arrival times. From the schedule editor, you can:
 
@@ -143,8 +192,41 @@ When creating a schedule, a single trip is generated with a starting time of **0
 - Delete a trip
 - Select a trip to edit
 
-![Alt text](images/pt_network_15.png)
+![Alt text](transit_dca/pt_network_15.png)
 
 When creating a new trip, specify a start time. The travel times from the links and a default dwell time of 0 second will be used to compute the schedule.
 
-![Alt text](images/pt_network_16.gif)
+![Alt text](transit_dca/pt_network_16.gif)
+
+# Results
+
+Once run, the simulation results in two types of outputs (for more guidance about model simulation, see section **How to use the interface / Run a simulation** of this documentation):
+
+* Chart-type outputs, containing information about lines, trips, stops...
+* GIS layers, allowing to visualize the results contained in the chart outputs on the map.
+
+## Chart outputs
+
+To access the chart-type outputs of the simulation, go under the **chart result tab**. The available charts are the following:
+
+* **Hubs chart**: Contains info about interconnections, including the list of stations connecting different lines and their names (a GIS layer is also available)
+* **Lines flows chart**: Contains total travel volume along each line of the network (GIS layers are also available)
+* **Lines catchment chart** (available only if socio-economic data and catchment radii were provided (see sections 3 and 4)): Contains information about catchment for each line, allowing coverage calculations.
+* **Lines characteristics chart**: Contains the main line characteristics that could be calculated based on provided inputs (number of stations, round trip time, speed, trips per day, required fleet size, yearly vehicle.kilometers)
+* **Lines properties**: Contains additional properties of lines, depending on provided inputs.
+* **Route type properties**: Contains properties aggregated by route type (bus, subway, tram...)
+
+![Alt text](transit_dca/results_1.png)
+
+## Map outputs
+
+To access the map-type outputs of the simulation, go inder the **map result tab**. Available maps include:
+
+* **Flows**: 
+* **Catchment**: 
+
+![Alt text](transit_dca/results_2.png)
+
+## Edit map styles and result layers
+
+For more info on map styles edition and export, check out section **How to use the Interface / Explore the results** of the documentation documentation. 
