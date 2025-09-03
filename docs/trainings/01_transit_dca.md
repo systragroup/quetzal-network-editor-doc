@@ -4,7 +4,7 @@
 
 To create or open a TRANSIT-DCA project, ensure that the TRANSIT-DCA model is selected in the Input tab.
 
-![Alt text](transit_dca/load_project_1.png)
+![Alt text](/transit_dca/load_project_1.png)
 
 # Scenario inputs
 
@@ -54,13 +54,13 @@ Public transport network can
     * imported using GTFS format via the GTFS importer micro-service (see section **Import lines through the GTFS importer micro-service**)
     * simply imported via a ZIP file of a pre-existing road network under the Import tab
 
-![Alt text](transit_dca/pt_network_1.png)
+![Alt text](/transit_dca/pt_network_1.png)
 
 ## Create a new line in the Public Transport Editor
 
 In order to add a new line, open the Map tab, click on the **NEW LINE** button. Then, fill in the properties of the new line. You may want to give it a name, a short name and a route type (such as bus or subway). Then, hit the **SAVE** button.
 
-![Alt text](transit_dca/pt_network_3.png)
+![Alt text](/transit_dca/pt_network_3.png)
 
 ### Mandatory line properties
 
@@ -79,7 +79,7 @@ For calculations to run successfully, you must ensure the following line propert
 
 To enrich the analyses, you can add additional properties of the lines. To do so, scroll all the way down through the list of line properties, enter the name of your new field in the **add field** section, then hit the "+" symbol on the right. 
 
-![Alt text](transit_dca/pt_network_4.gif)
+![Alt text](/transit_dca/pt_network_4.gif)
 
 The properties you can add are the following:
 
@@ -114,17 +114,17 @@ Alternatively, after creating your line, you will be able to define its time sch
 
 Once your line is initialized, click anywhere on the the map to start drawing. Stop drawing with a right click anywhere on the map. Once the line is complete, hit the **CONFIRM** button to save it, you can always edit the properties and the itinerary of your line later.
 
-![Alt text](transit_dca/pt_network_5.gif)
+![Alt text](/transit_dca/pt_network_5.gif)
 
 You can add a stop in the middle of a line with a left click on a link. You can also cut the line with a right click on a node > **CUT BEFORE NODE** or **CUT AFTER NODE**. 
 
-![Alt text](transit_dca/pt_network_6.gif)
+![Alt text](/transit_dca/pt_network_6.gif)
 
 Once you have created a line for one direction, you can duplicate it and reverse it to create the return line. TO do so, click the **duplcate** icon in the list of lines and select **reverse**. Update the **New name** field to the desired trip_id of the new trip by matching the direction_id. If the trip you duplicated has its trip_id set to *A_0*, the trip_id of the return trip should be set to *A_1*.
 
 For bus lines, you may have to adjust a litle bit the return line to avoid one way roads. To create bus stops on different sides of a road or create different routes for different directions, you must select the **duplicate nodes** option.
 
-![Alt text](transit_dca/pt_network_7.gif)
+![Alt text](/transit_dca/pt_network_7.gif)
 
 ## Import lines through the GTFS importer micro-service
 
@@ -140,7 +140,7 @@ To edit the itinerary of a line, find it in the left pannel and click on its nam
 
 Alternatively, you can hover over the map and right-click on your line. If multiple lines are overlaid, a popup will open, allowing you to choose which line you want to edit.
 
-![Alt text](transit_dca/pt_network_10.gif)
+![Alt text](/transit_dca/pt_network_10.gif)
 
 ### Editor Options
 
@@ -150,8 +150,8 @@ By default, when creating or editing a line, the geometry is created «as the cr
 * Stick Nodes on Existing Nodes
 * Follow Roads
 
-![Alt text](transit_dca/pt_network_11.png)
-![Alt text](transit_dca/pt_network_12.png)
+![Alt text](/transit_dca/pt_network_11.png)
+![Alt text](/transit_dca/pt_network_12.png)
 
 #### Edit Line Geometry
 
@@ -176,13 +176,13 @@ While editing a line, you can right click on a link to edit its propoerties. You
 
 If you click on **EDIT PROPERTIES** in the side panel, you will edit the properties of all the links of your line (or selected group). It is relevant for the headway, catchment radii, rolling stock capacity for instance or if you want to set a constant speed on all the line. 
 
-![Alt text](transit_dca/pt_network_13.gif)
+![Alt text](/transit_dca/pt_network_13.gif)
 
 ## Create or Edit a Schedule
 
 By default, new lines are frequency-based, defined by the headway in the line properties. You can convert any line to be schedule-based by selecting **CREATE SCHEDULE** in the **EDIT PROPERTIES** form.
 
-![Alt text](transit_dca/pt_network_14.png)
+![Alt text](/transit_dca/pt_network_14.png)
 
 When creating a schedule, a single trip is generated with a starting time of **08:00:00**, travel times based on links *time*, and a default dwell time of 0 seconds. In the **departures** section on the right-hand side, you can see the departure times from each station of the line for the trip. In the **arrivals** section, you can see the arrival times. From the schedule editor, you can:
 
@@ -192,11 +192,11 @@ When creating a schedule, a single trip is generated with a starting time of **0
 - Delete a trip
 - Select a trip to edit
 
-![Alt text](transit_dca/pt_network_15.png)
+![Alt text](/transit_dca/pt_network_15.png)
 
 When creating a new trip, specify a start time. The travel times from the links and a default dwell time of 0 second will be used to compute the schedule.
 
-![Alt text](transit_dca/pt_network_16.gif)
+![Alt text](/transit_dca/pt_network_16.gif)
 
 # Results
 
@@ -216,7 +216,7 @@ To access the chart-type outputs of the simulation, go under the **chart result 
 * **Lines properties**: Contains additional properties of lines, depending on provided inputs.
 * **Route type properties**: Contains properties aggregated by route type (bus, subway, tram...)
 
-![Alt text](transit_dca/results_1.png)
+![Alt text](/transit_dca/results_1.png)
 
 ## Map outputs
 
@@ -225,7 +225,7 @@ To access the map-type outputs of the simulation, go inder the **map result tab*
 * **Flows**: 
 * **Catchment**: 
 
-![Alt text](transit_dca/results_2.png)
+![Alt text](/transit_dca/results_2.png)
 
 ## Edit map styles and result layers
 
