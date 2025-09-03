@@ -82,6 +82,7 @@ export const en = defineConfig({
         text: 'Project Specific Trainings',
         items: [
           { text: 'Introduction', link: '/trainings/00_introduction' },
+          { text: 'Transit-DCA', link: '/trainings/01_transit_dca' },
 
         ]
       }
