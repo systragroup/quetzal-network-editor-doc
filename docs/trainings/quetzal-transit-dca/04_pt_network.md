@@ -1,31 +1,11 @@
 # Public Transport Network
 
-## Overview
-
 Public transport network can 
     * be drawn directly in the app under the Map tab (see section **Create a new line in the Public Transport Editor**)
     * imported using GTFS format via the GTFS importer micro-service (see section **Import lines through the GTFS importer micro-service**)
     * simply imported via a ZIP file of a pre-existing road network under the Import tab
 
-Under the Map tab, you can then view and edit the Public Transport (PT) network:
-
-- Filter by agency_id, route_type, trip_id, etc, ...
-
 ![Alt text](images/pt_network_1.png)
-
-::: tip 💡 TIP
-You can use filters to hide/show groups of lines or hide/show individual line.
-:::
-
-Following functionalities are currently available in the Public Transport Editor:
-
-- Create a new line
-- Duplicate a line (or create a reverse line)
-- Edit the line properties
-- Edit a line geometry
-- Create or edit schedules
-
-![Alt text](images/pt_network_2.png)
 
 ## Create a new line in the Public Transport Editor
 
@@ -35,16 +15,16 @@ In order to add a new line, open the Map tab, click on the **NEW LINE** button.
 
 ### Mandatory line properties
 
-For calculations to run successfully, you must make sure the following line properties are filled as follows:
+For calculations to run successfully, you must ensure the following line properties are filled as follows:
 
-- **route_id**: id of the route, unique for each route. This is the name of the line as it will appear in the results
-- **direction_id**: 1 or 0. This attribute should match the suffix of the **trip_id** attribute. This attribute adjusts automatically when creating return lines (see below).
-- **trip_id**: id of the trip, one trip_id corresponds to one line and one direction along this line. Needs to be formatted as **route_id**_**direction_id** (e.g.: **route_id**=A, **direction_id**=0, **trip_id**=A_0)
+- **"route_id"**: id of the route, unique for each route. This is the name of the line as it will appear in the results
+- **"direction_id"**: 1 or 0. This attribute should match the suffix of the **trip_id** attribute. This attribute adjusts automatically when creating return lines (see below).
+- **"trip_id"**: id of the trip, one trip_id corresponds to one line and one direction along this line. Needs to be formatted as **route_id**_**direction_id** (e.g.: **"route_id"**=A, **"direction_id"**=0, **"trip_id"**=A_0)
 
-- **headway**: service interval in seconds.
-- **route_short_name**: alias of the line, easy to read.
-- **route_type**: type of transport: bus, train, tram... 
-- **speed**: commercial speed in km/h. This can be adjusted using road network speeds using. If a road network is used, public transport speed for lines using the road network will be adjusted.
+- **"headway"**: service interval in seconds.
+- **"route_short_name"**: alias of the line, easy to read.
+- **"route_type"**: type of transport: bus, train, tram... 
+- **"speed"**: commercial speed in km/h. This can be adjusted using road network speeds using. If a road network is used, public transport speed for lines using the road network will be adjusted.
 
 ### Optional line properties
 
@@ -55,29 +35,29 @@ To enrich the analyses, you can add additional properties of the lines. To do so
 The properties you can add are the following:
 
 * Catchment radius: for catchment to be computed, you also need to provide a zonage.geosjon file in the scenario's inputs (see section 03_load_project).
-    * **catchment_radius**: distance to the network used to compute network/line/station coverage (in meters). You may introduce several catchment radii to assess coverage for different access modes (people reaching the transport network by walking, biking, driving...). To do so, create different properties and name them **catchment_radius_mode1**, **catchment_radius_mode2**... , where **mode1**, **mode2** should be replaced by the modes you wish to model (walk, bike, car...). Default value **catchment_radius**=500m will be used if no value is set.
+    * **"catchment_radius"**: distance to the network used to compute network/line/station coverage (in meters). You may introduce several catchment radii to assess coverage for different access modes (people reaching the transport network by walking, biking, driving...). To do so, create different properties and name them **"catchment_radius_mode1"**, **"catchment_radius_mode2"**... , where **mode1**, **mode2** should be replaced by the modes you wish to model (walk, bike, car...). Default value **"catchment_radius"**=500m will be used if no value is set.
 
 * Service hours: 
-    * **nb_service_hours**: Number of service hours. Default value **nb_service_hours**=12 will be used if no value is set.
+    * **"nb_service_hours"**: Number of service hours. Default value **"nb_service_hours"**=12 will be used if no value is set.
 
 * Peak hours parameters: if those fields are not added, no peak hour will be considered.
-    * **nb_peak_hours**: Number of peak hours throughout a day. 
-    * **headway_ph**: Interval of service during peak hour (in seconds)
-    * **headway_oph**: Interval of service outside peak hour (in seconds)
+    * **"nb_peak_hours"**: Number of peak hours throughout a day. 
+    * **"headway_ph"**: Interval of service during peak hour (in seconds)
+    * **"headway_oph"**: Interval of service outside peak hour (in seconds)
 
 ::: tip 💡 TIP
 Alternatively, after creating your line, you will be able to define its time schedule. See section **Create line time schedule** below.
 :::
 
 * Capacity:
-    * **capacity**: Rolling stock capacity for the selected line. Default value **capacity**=60 will be used if no value is set.
+    * **"capacity"**: Rolling stock capacity for the selected line. Default value **capacity**=60 will be used if no value is set.
 
 * Operational costs:
-    * **opex**: Operational costs in €/veh.km. Default value **opex**=0.3 will be used if no value is set.
+    * **"opex"**: Operational costs in €/veh.km. Default value **opex**=0.3 will be used if no value is set.
 
 * Travel time: Applicable only if a road network is used.
-    * **road_pt_factor**: Used only if links follow road network for this line. Speed reduction factor for road public transport modes (bus, express bus, etc.). Default value **road_pt_factor**=1.25 will be used if no value is set.
-    * **stop_interval**: Dwell time, time penalty (in seconds) that is added to the total travel time for each stop along the line. Default value **stop_interval**=300 will be used if no value is set.
+    * **"road_pt_factor"**: Used only if links follow road network for this line. Speed reduction factor for road public transport modes (bus, express bus, etc.). Default value **road_pt_factor**=1.25 will be used if no value is set.
+    * **"stop_interval"**: Dwell time, time penalty (in seconds) that is added to the total travel time for each stop along the line. Default value **stop_interval**=300 will be used if no value is set.
 
 * Modal share: Applicable only if a origin-destination matrix is used.
 
@@ -91,8 +71,6 @@ You can add a stop in the middle of a line with a left click on a link. You can 
 
 ![Alt text](images/pt_network_6.gif)
 
-### Creating the return line
-
 Once you have created a line for one direction, you can duplicate it and reverse it to create the return line. TO do so, click the **duplcate** icon in the list of lines and select **reverse**. Update the **New name** field to the desired trip_id of the new trip by matching the direction_id. If the trip you duplicated has its trip_id set to *A_0*, the trip_id of the return trip should be set to *A_1*.
 
 For bus lines, you may have to adjust a litle bit the return line to avoid one way roads. To create bus stops on different sides of a road or create different routes for different directions, you must select the **duplicate nodes** option.
@@ -101,30 +79,7 @@ For bus lines, you may have to adjust a litle bit the return line to avoid one w
 
 ## Import lines through the GTFS importer micro-service
 
-The GTFS importer micro-service allows to use GTFS files to generate your public transport network instead of drawing it manually. You can import GTFS files from your computer as ZIP files or directly import GTFS files from the mobilitydata database for a selected area.
-
-### Zip
-
-1. Go to the Microservices tab
-2. Go to GTFS importer
-3. Upload GTFS files
-4. Select date
-5. Convert GTFS to Quetzal links and nodes
-
-![Alt text](images/pt_network_8.png)
-
-### Web
-
-1. Go to the Microservices tab
-2. Go to GTFS importer
-3. Drag the map over the area of interest
-4. Check the agencies to download\*
-5. Download
-
-![Alt text](images/pt_network_9.png)
-
-<small> *If an error message appears during download, one of the selected agencies may be the cause; please try again by changing the agencies selected to find the faulty one. </small>
-## Edit an Existing Line
+You can also use the GTFS importer micro-service to import public transport networks from GTFS files, from your computer or directly from the online open mobilitydata database. See documentation under the **Micro services / GTFS importer** section of this documentation.
 
 To ensure the calculations are successfully carried out, you must add the desired properties (among those mentioned in the **Create a new line** section above) to the imported lines. To do so, see the **Edit line properties** below.
 

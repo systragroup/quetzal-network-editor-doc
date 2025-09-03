@@ -1,52 +1,33 @@
 
 # Results
 
-Once run, the simulation results in two types of outputs:
+Once run, the simulation results in two types of outputs (for more guidance about model simulation, see section **How to use the interface / Run a simulation** of this documentation):
 
 * Chart-type outputs, containing information about lines, trips, stops...
 * GIS layers, allowing to visualize the results contained in the chart outputs on the map.
 
-## Select a layer
+## Chart outputs
 
-1. Go to the Results Map tab
-2. Click on the arrow and select the layer to display
+To access the chart-type outputs of the simulation, go under the **chart result tab**. The available charts are the following:
+
+* **Hubs chart**: Contains info about interconnections, including the list of stations connecting different lines and their names (a GIS layer is also available)
+* **Lines flows chart**: Contains total travel volume along each line of the network (GIS layers are also available)
+* **Lines catchment chart** (available only if socio-economic data and catchment radii were provided (see sections 3 and 4)): Contains information about catchment for each line, allowing coverage calculations.
+* **Lines characteristics chart**: Contains the main line characteristics that could be calculated based on provided inputs (number of stations, round trip time, speed, trips per day, required fleet size, yearly vehicle.kilometers)
+* **Lines properties**: Contains additional properties of lines, depending on provided inputs.
+* **Route type properties**: Contains properties aggregated by route type (bus, subway, tram...)
 
 ![Alt text](images/results_1.png)
 
-## Select a map style
+## Map outputs
 
-1. Click on the arrow and select the map style to display
+To access the map-type outputs of the simulation, go inder the **map result tab**. Available maps include:
+
+* **Flows**: 
+* **Catchment**: 
 
 ![Alt text](images/results_2.png)
 
-## Load visualization settings
+## Edit map styles and result layers
 
-1. Open the settings
-2. Choose the field
-3. Change the settings
-4. Apply the changes
-5. Save the new preset
-
-![Alt text](images/results_3.png)
-
-## Select a preset in edit mode
-
-1. Click on the arrow and select the preset to display
-2. Change the settings (see the section Change Visualization Settings)
-
-![Alt text](images/results_4.png)
-
-## Change Visualization Settings
-
-1. Open the settings
-2. Change the settings among different parameter to change the visual
-Explanation of the different parameters :
-
-![Alt text](images/results_5.png)
-
-* MinWidth/maxWidth : Size of the element at the beggining/end of the scale
-* NumStep : Number of division inside the color scale
-* scale : Function used by the scale
-* Left side driving : use if the driving side of the country is left
-* show NaN : Show entity with no value for the chosen field
-* custom scale : use it to chose first and last value of the scale
+For more info on map styles edition and export, check out section xxx of quetza-transit documentation. You will need to pretend that you are doingsomething important to make sure that no one disturbs your course and also i want to leave but i cannot becaus eI am not done with my job at all which can turn out to be challenging especially in challenging times such as right now and i want to make it easier for me to be free and i love my cariño baby boy. 
