@@ -59,6 +59,8 @@ export const en = defineConfig({
           { text: 'Model Maintenance', link: '/deploy/06_model_maintenance' },
           { text: 'Advanced configuration', link: '/deploy/07_model_configure_advanced' },
           { text: 'Variants configuration', link: '/deploy/08_model_variants_configure' },
+          { text: 'Model documentaion', link: '/deploy/09_model_docs' },
+
 
         ]
       },

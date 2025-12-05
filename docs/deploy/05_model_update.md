@@ -49,3 +49,19 @@ python update-S3-model-files.py <model_folder> <scenario1> <scenario2>
 ::: danger Danger
 data will be permenently replace on the database for the updated scenarios.
 :::
+
+
+## 4. Update Docs {#update-docs} 
+
+::: info 
+docs in under the scenario _common/docs/ on S3.
+:::
+
+this script will copy a the content of a folder from your local quetzal model folder `<model_folder>/<docs_folder>/` to the database (S3).
+
+```bash
+python update-model-docs.py <model_folder> <docs_folder>
+```
+::: danger Danger
+data will be permenently replace on the database
+:::
