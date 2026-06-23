@@ -50,8 +50,20 @@ python update-S3-model-files.py <model_folder> <scenario1> <scenario2>
 data will be permenently replace on the database for the updated scenarios.
 :::
 
+## 4. Update Config {#update-config} 
 
-## 4. Update Docs {#update-docs} 
+::: info 
+modelConfig in under the scenario _common/modelConfig.json on S3.
+:::
+
+this script will copy modelConfig.json from your local quetzal model folder `<model_folder>/modelConfig.json` to the database (S3).
+
+```bash
+python update-model-config.py <model_folder>
+```
+
+
+## 5. Update Docs {#update-docs} 
 
 ::: info 
 docs in under the scenario _common/docs/ on S3.

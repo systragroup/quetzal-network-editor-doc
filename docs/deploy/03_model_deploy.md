@@ -18,7 +18,10 @@ outline: deep
 ├─ Dockerfile
 ├─ DockerFile.dockerignore
 ├─ requirements.txt
-└─ step-functions.json
+├─ step-functions.json
+└─ modelConfig.json
+
+
 ```
 
 
@@ -47,10 +50,6 @@ The provided Dockerfile should work for any model without any modification.
 **.cache**
 **/*.ipynb_checkpoints*
 **/*.DS_store*
-quetzal/.git
-quetzal/.venv
-quetzal/wheels-cp38-win_amd64
-quetzal/docker/infra
 <model_folder>/scenarios/*  // [!code focus]
 <model_folder>/.git/objects // [!code focus]
 ```
@@ -71,7 +70,7 @@ a .git file is needed in the docker (for some obscure reason). So you should kee
 ### requirements.txt
 Ajust the python requirement if needed. 
 
-We recommand using [pip chill](https://pypi.org/project/pip-chill/). if needed.
+We recommand installing [quetzal from pip](https://pypi.org/project/quetzal-transport/). if not, modify the dockerfile to copy your local quetzal folder in the docker and provide all of its requirements.
 
 ### step-functions.json
 5. Modify the step function configuration according to model steps anch change `<model_name>` with your model name (see step 2.)
@@ -150,6 +149,10 @@ The last step has `"End": true` instead of `Next: Step_x`
       "Next": "STEP 2" # TO EDIT  // [!code focus]
     },
 ```
+
+### modelConfig.json
+This file is used to set model wide configuration (values choices, units, etc)
+see  [modelConfig](/deploy/07_model_configure_advanced/#model-config).
 
 ## Deploying
 

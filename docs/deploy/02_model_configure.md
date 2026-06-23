@@ -66,6 +66,7 @@ The reccomanded file structure for a model is display bellow. It contains **scen
 ├─ requirement.txt
 ├─ .env
 └─ step-functions.json
+└─ modelConfig.json
 ...
 ```
 

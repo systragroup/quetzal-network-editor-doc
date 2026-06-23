@@ -122,58 +122,59 @@ you can lock any scenario simply by adding a **.lock** empty file at the root di
 scenario named **base** is always lock
 :::
 
+## Model Config 
+This file is unique for a model (under _common/ in the database) and is used to defined some parameters in the front-end such as display units
+::: danger New version 8.0
+the **attributesChoices.json** file was removed and its values are now defined in this modelConfig.json globally for a model and not per scenario.
 
-## Attributes choices
+:::
 
-![Alt text](/deploy/attribute_choices.png)
-
-in the root dir of a project. you can add "attributesChoices.json" This gives choices for **PT** and/or **road** attributes.
-ex:
-
-
-```kotlin
-├─ inputs
-|  ├─ pt           
-|  |  ├─ links.geojson 
-|  │  └─ nodes.geojson
-|  ├─ road             
-|  |  ├─ road_links.geojson 
-|  │  └─ road_nodes.geojson 
-|  ├─ params.json      
-│  └─ ... 
-├─ outputs
-│  └─ ... 
-├─ styles.json        
-├─ attributesChoices.json       // [!code focus]   
-└─ ... 
-```
 
 ```json
 {
-    "pt":{
+    "version": 0, // for future migration
+    "attributesChoices": {
+        "links": {
+            "pickup_type": [
+                0,
+                1,
+            ],
+            "drop_off_type": [
+                0,
+                1,
+            ]
+        },
+        "road_links": {
+            "oneway": [
+                "0",
+                "1"
+            ],
+            "cycleway":[
+                "yes",
+                "no",
+                "shared"
+            ],
+            
+        }
     },
-    "road":{
-       "oneway":[
-          "0",
-          "1"
-       ],
-       "cycleway":[
-          "yes",
-          "no",
-          "shared"
-       ],
-       "cycleway_reverse":[
-          "yes",
-          "no",
-          "shared"
-       ],
-       "highway":[
-          "motorway",
-          "residential"
-       ]
+       "units": {
+        "headway": "min",
+        "time": "min",
+        "length": "km"
     }
- }
+}
 ```
+
+### Attributes choices
+attributesChoices This gives choices for **PT** and/or **road** attributes.
+
+![Alt text](/deploy/attribute_choices.png)
+
+### units
+units let you set different units in the editions. this will not change the actual values to maximize compatibility with Apis (time will stay in seconds in the exported files).
+
+![Alt text](/deploy/units.png)
+
 
 
 
