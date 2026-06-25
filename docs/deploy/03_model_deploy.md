@@ -152,7 +152,7 @@ The last step has `"End": true` instead of `Next: Step_x`
 
 ### modelConfig.json
 This file is used to set model wide configuration (values choices, units, etc)
-see  [modelConfig](/deploy/07_model_configure_advanced/#model-config).
+see  [model config](./07_model_configure_advanced#model-config).
 
 ## Deploying
 
