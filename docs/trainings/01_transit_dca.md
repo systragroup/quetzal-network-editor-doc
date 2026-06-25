@@ -37,7 +37,7 @@ The following are the inputs required for the model to run its calculations and 
 
     Load the file in the OD Matrix section of the inputs tab. Alternatively, you can draw the OD-matrix in the OD subsection under the Maps tab.
 
-    ![Alt text](/transit_dca/create_od_1.gif)
+    ![Alt text](/transit_dca/create_od.gif)
 
 * **Zoning file** *(optional)*: file containing socio-economical data and used to compute network, line and station coverage indicators. To compute coverage, you must provide a zoning file named zonage.geojson. Here is the main information it must include:
 
