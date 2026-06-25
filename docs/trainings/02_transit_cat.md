@@ -285,7 +285,7 @@ In the settings section (gear icon in the top-right-hand corner), you can chose 
 ::: tip 💡 TIP
 Styles presets are available in the *Presets* drop-down menu above the *Layers* drop-down menu. They allow to visualize the GIS output with preset adapted symbologies.
 
-![Alt text](/transit_dca/results_4.gif)
+![Alt text](/transit_dca/results_4.png)
 
 :::
 
