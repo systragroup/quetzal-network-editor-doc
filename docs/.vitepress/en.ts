@@ -54,12 +54,12 @@ export const en = defineConfig({
           { text: 'Prerequisites', link: '/deploy/01_prerequisites' },
           { text: 'Model configuration', link: '/deploy/02_model_configure' },
           { text: 'Model deploying', link: '/deploy/03_model_deploy' },
-          { text: 'Model user group', link: '/deploy/04_model_user_group' },
           { text: 'Model update', link: '/deploy/05_model_update' },
-          { text: 'Model Maintenance', link: '/deploy/06_model_maintenance' },
+          { text: 'Model user group', link: '/deploy/04_model_user_group' },
+          { text: 'Model maintenance', link: '/deploy/06_model_maintenance' },
           { text: 'Advanced configuration', link: '/deploy/07_model_configure_advanced' },
           { text: 'Variants configuration', link: '/deploy/08_model_variants_configure' },
-          { text: 'Model documentaion', link: '/deploy/09_model_docs' },
+          { text: 'Model documentation', link: '/deploy/09_model_docs' },
 
 
         ]

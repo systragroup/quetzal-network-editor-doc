@@ -8,36 +8,55 @@
 
 ![Alt text](/deploy/model_infra.png)
 
-## 1. Update a model on ECR (docker)
+## 1. Update model (docker) {#update-model} 
 
-This will Create and deploy a docker image with:
- * Python and python librairies (requirement.txt)
- * model Notebooks
- * model inputs files
+::: info Windows 
+make sure to <b>open docker desktop</b> first
+:::
 
-Run the command and provide a tag (anything) when prompted
+* This will build and deploy a docker image of your model.
+* Run the command and provide a tag (version) when prompted
 
 ::: code-group
-
-```bash [Linux]
-./update-lambda.sh <model_folder_name>
+```bash [Lambda]
+./update-lambda.sh <model_folder> 
 ```
-```bat [Windows]
-update-lambda.bat <model_folder_name>
+```bash [ECS]
+./update-ecs.sh <model_folder> 
 ```
 :::
 
+On windows
+::: code-group
+```bat [Lambda]
+update-lambda.bat <model_folder> 
+```
+```bat [ECS]
+update-ecs.bat <model_folder> 
+
+```
+:::  
+
+::: tip Info 
+This function will build the docker locally and push it on aws (ECR), then it will update the cloud function with the newly pushed docker. This operation can be long the first time.
+:::
 
 
-## 2. Update Step function workflow 
+## 2. Update model steps  {#update-steps} 
 
-This will only push the step-functions.json file Which tells the model steps (which notebooks to run). [more info](03_model_deploy.html#step-functions-json)
+This will only push the steps file (step-functions.json or steps.json) Which tells the model steps (which notebooks to run). [more info](03_model_deploy.html#step-functions-json)
 
-```bash
+9. Push the step-function definition or steps.
+::: code-group
+```bash [Lambda]
 python update-function-config.py <model_folder>
 ```
+```bash [ECS]
+python update-model-steps <model_folder>
+```
+:::
 
-## 3. Update scenario (S3)
+## 3. Update scenario (S3)  {#update-scenario} 
 
 this script will copy a scenario from your local scenario folder `<model_folder>/scenarios/<scenario1>/` to the database (S3).
 

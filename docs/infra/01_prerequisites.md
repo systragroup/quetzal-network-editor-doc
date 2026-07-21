@@ -9,11 +9,11 @@
 
 Install **Terraform** using [this guide](https://developer.hashicorp.com/terraform/downloads)
 
-## Others
+## Others requirements
  * AWS-CLI
  * Docker
  * quetzal-network-editor-backend github repo
- * [See](../deploy/01_prerequisites).
+ * [See 01_prerequisites](../deploy/01_prerequisites).
 
 
 
