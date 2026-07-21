@@ -1,3 +1,6 @@
+---
+outline: deep
+---
 
 
 # INFRA (TERRAFORM)
@@ -9,6 +12,53 @@ Creating/updating the infrastructure can be dangerous. Only a trained user shoul
 ::: info
    Infrastrucure is under `infra/models/` into **quetzal-network-editor-backend**
 :::
+
+
+## Infrastructure 
+Model can be deployed on either `Lambda` or `ECS` see below for more information on both infrastructures
+
+### Lambda 
+
+* Lambda uses aws step-functions as an orchestrator.
+* Steps are predefined in the step-function definition.
+* Each steps are run in a new lambda execution.
+* Progress in reported by the step-functions.
+
+👍 advantages:
+* starts in seconds when used frequently
+* easy progress tracking
+
+👎 disavantages:
+* memory (ram) 10Gib max
+* time limit: 15 minutes max (per step)
+* max 6vCPU
+* start in a minute if not frequently used in (+/- 1 week)
+* lambda specific Docker images
+
+
+### ECS
+
+* ECS run the docker in a fargate instance 
+* Orchestration is done in the running model docker image.(`quetzal-network-editor-backend/docker/mains_ecs.py`)
+* Progress is reported by the docker orchestrator writing a status.json file on S3. ECS also return fargate status such as RUNNING,STARTING,etc
+* Steps are passed to the model alongside the parameters
+
+👍 advantages:
+* no time limit
+* max memory (ram) 244Gib
+* up to 32vCPU
+* cheaper than lambda (after lambda free tier limit)
+
+👎 disavantages:
+* always start in a minute (and ~30secs to stop)
+
+
+::: info info
+ECS long start time can be offset with faster I/O. Files are only downloaded and uploaded to S3 once, while Lambda infra will do so at each step. Lambda is a better choice for small and fast microservices running a single step.
+:::
+
+
+
 ## Configuration
 
 1. **Create a new .tfvars file** with the name of your model `infra/models/environement/<model_name>.tfvars` 
@@ -22,20 +72,37 @@ Creating/updating the infrastructure can be dangerous. Only a trained user shoul
 the name must be unique in the AWS region (ca-central-1) (s3 bucket limitation)
 
 * the .tfvars file contains the executor ressources.
-```
+::: code-group
+``` [Lambda]
     quetzal_model_name      = "<model_name>"
     lambda_memory_size      = 4016
     lambda_time_limit       = 300
     lambda_storage_size     = 4016
 ```
-::: tip  Ressources configuration. 
+``` [ECS]
+    quetzal_model_name      = "<model_name>"
+    ecs_cpu_units    = 1024
+    ecs_memory_size  = 4096
+    ecs_time_limit   = 60
+    ecs_storage_size = 21
+```
+:::
+
+::: tip  Ressources configuration (Lambda). 
 * Time (secs) max: 900 (15 minutes)
-* Memory (mb) max: 10240 (10 Gb)
-* Storage (mb) max: 10240 (10 Gb)
+* Memory (mb) max: 10240 (10 Gib)
+* Storage (mb) max: 10240 (10 Gib)
+* vCPUs automaticaly scale with memory 
 :::
-::: info 
-number of vCPUs scale with memory with a max of 6.
+
+::: tip  Ressources configuration (ECS). 
+* Time (mins) max: None
+* Memory (mb) max: 249 856 (244 Gib)
+* Storage (gib) max: 200 (200 Gib)
+* vCPUs (cpu unit) max: 32768 (32 vcpu)
+* [see available combinations](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size)
 :::
+
 
 ## Workspace
 2. **Go to the infra folder** `(infra/models)`
@@ -115,6 +182,10 @@ terraform apply -var-file="environments/<model_name>.tfvars" -var os="windows"
 
 * **S3 bucket** named <model_name> (empty).
 * **ECR** repo to store the model docker image (with dummy docker image).
-* **Lambda function** (running dummy docker image) with access to the S3 bucket and cloudwatch (logs).
-* **Step function** to launch the lambda function from the Api.
 * **IAM role and policy** to add to the cognito user group (for user to acces the model when authenticated).
+   * **Lambda function** (running dummy docker image) with access to the S3 bucket and cloudwatch (logs).
+   * **Step function** to launch the lambda function from the Api.
+   
+   or
+   
+   * **ECS task definition** (running dummy docker image) with access to the S3 bucket and cloudwatch (logs).

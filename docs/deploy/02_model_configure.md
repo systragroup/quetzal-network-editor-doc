@@ -65,7 +65,7 @@ The reccomanded file structure for a model is display bellow. It contains **scen
 ├─ Dockerfile.dockerignore
 ├─ requirement.txt
 ├─ .env
-└─ step-functions.json
+└─ step-functions.json (or steps.json if using ECS)
 └─ modelConfig.json
 ...
 ```
@@ -124,7 +124,7 @@ We are generally talking about the **inputs folder**.
 |  └─ ...
 ```
 
-### Execution (Lambda)
+### Execution
 
 When running a scenario on the cloud platform. The files of the selected scenario will be copy into the model root directory during execution.
 
@@ -168,7 +168,7 @@ We need specific headers in our notebooks to take this into account. when runnin
 
 ## Notebook Headers
 
-Like when using a Quetzal Launcher, The notebooks are converted into .py files and args are passed to them when running on the Cloud (lambda)
+Like when using a Quetzal Launcher, The notebooks are converted into .py files and args are passed to them when running on the Cloud (lambda/fargate)
 
 Use those headers in your notebooks:
 
@@ -186,7 +186,7 @@ sys.path.insert(0,'../../../../quetzal/')
 from quetzal.model import stepmodel
 from quetzal.io import excel
 import os
-on_lambda = bool(os.environ.get('AWS_EXECUTION_ENV'))
+on_aws = bool(os.environ.get('AWS_EXECUTION_ENV'))
 ```
 There is a env variable when running in the cloud `AWS_EXECUTION_ENV` that we can use.
 
@@ -195,7 +195,7 @@ scenario = argv['scenario']
 training_folder = argv['training_folder']
 
 # if local. add the path to the scenario scenarios/<scenario>/
-local_scen_path =  '' if on_lambda else os.path.join('scenarios/', scenario)
+local_scen_path =  '' if on_aws else os.path.join('scenarios/', scenario)
 
 input_folder = os.path.join(training_folder,'inputs/')
 scenario_folder = os.path.join(training_folder, local_scen_path, 'inputs/')
@@ -203,7 +203,7 @@ model_folder = os.path.join(training_folder, local_scen_path, 'model/')
 output_folder = os.path.join(training_folder, local_scen_path, 'outputs/')
 ```
 
-If locally or on the cloud (lambda). the paths will differ
+If locally or on the cloud (lambda/fargate). the paths will differ
 
 |                 |             Local             |          Cloud |
 |-----------------|:-----------------------------:|---------------:|

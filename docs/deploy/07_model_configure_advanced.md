@@ -118,6 +118,18 @@ you can lock any scenario simply by adding a **.lock** empty file at the root di
 └─ ... 
 ```
 
+There is also a script provided to lock or unlock one or many scenarios
+
+::: code-group
+```bash [lock]
+python lock-scenarios.py <model_folder> <scenario1> <scenario2>
+```
+
+```bash [unlock]
+python unlock-scenarios.py <model_folder> <scenario1> <scenario2>
+```
+:::
+
 ::: tip Note 
 scenario named **base** is always lock
 :::
@@ -178,15 +190,22 @@ units let you set different units in the editions. this will not change the actu
 
 
 
-## Step function choices
+## Step choices
 
 ![Alt text](/deploy/run_multi_choice.png)
 
-In the step function definition (step-functions.json), you can add a choice as the first step after Authorization.
+In the steps definition (step-functions.json or steps.json), you can add a choice to run different pipeline of steps. 
+
+Those pipeline are globally defined for a model, but their availability per scenario is defined by the parameters.json file.
+
 :::tip
 You can add as many choices as you want. in this case we have 3 pipelines: default, demand and orchestrator.
 :::
-```json
+
+
+::: code-group
+```json [step-function.json]
+// add this as the first step (after Authorization) 
 "Choice": {
     "Type": "Choice",
     "Choices": [
@@ -204,11 +223,48 @@ You can add as many choices as you want. in this case we have 3 pipelines: defau
     "Default": "Step 1"
 },
 ```
+```json [steps.json]
+[
+    {
+        "name": "default", // [!code highlight]
+        "steps": [
+            {
+                "name": "step 1", 
+                "path": "notebooks/2_model/test_1.ipynb"
+            },
+            {
+                "name": "step 2",
+                "path": "notebooks/2_model/test_2.ipynb"
+            }
+        ]
+    },
+    {
+        "name": "orchestrator", // [!code highlight]
+        "steps": [
+            {
+                "name": "orchestrator",
+                "path": "notebooks/2_model/orchestrator.ipynb"
+            }
+        ]
+    },
+    {
+        "name": "demand", // [!code highlight]
+        "steps": [
+            {
+                "name": "demand step 1",
+                "path": "notebooks/2_model/demand.ipynb"
+            }
+        ]
+    }
+]
+
+```
+:::
 
 Then. You need to add parameters specific to each Choice into the keyword **"model"**.
 
 :::tip
-The webapp will only display The choices if there are parameters associated to them. This allow us to have a Comparision scenario with 1 pipeline and a normal scenario with another pipeline for example.
+The app will only display The choices if there are parameters associated to them. This allow us to have a Comparision scenario with one pipeline and a base scenario with another pipeline for example.
 :::
 
 ```json

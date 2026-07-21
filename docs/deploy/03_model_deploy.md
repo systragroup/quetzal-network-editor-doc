@@ -8,21 +8,40 @@ outline: deep
    Files are under `docker/` into **[quetzal-network-editor-backend](https://github.com/systragroup/quetzal-network-editor-backend/tree/main/docker)**
 :::
 
-## Configuration
+Model can be deployed on either `Lambda` or `ECS`
+
+## Configuration (Lambda)
 
 1. **Copy files** from  `docker/template` to the **root of the model directory**
 
+ **Copy files** from  `docker/template_lambda` or `docker/template_ecs` 
 
-```
+
+::: code-group
+
+``` kotlin [Lambda]
 ├─ .env
-├─ Dockerfile
 ├─ DockerFile.dockerignore
 ├─ requirements.txt
-├─ step-functions.json
-└─ modelConfig.json
-
+├─ modelConfig.json  
+├─ step-functions.json   <-- template_lambda // [!code highlight] 
+└─ Dockerfile            <-- template_lambda // [!code highlight] 
 
 ```
+``` kotlin [ECS]
+├─ .env
+├─ DockerFile.dockerignore
+├─ requirements.txt
+├─ modelConfig.json
+├─ steps.json            <-- template_ecs // [!code highlight] 
+└─ Dockerfile            <-- template_ecs // [!code highlight] 
+
+```
+:::  
+
+
+
+
 
 
 ### .env
@@ -30,28 +49,26 @@ outline: deep
 
 ```
 AWS_ECR_REPO_NAME=<model_name>
-AWS_LAMBDA_FUNCTION_NAME=<model_name>
-AWS_BUCKET_NAME=<model_name>
 ```
 `<model_name>` is defined in the infra folder `/infra/models/environments/<model_name>.tfvars`.
 
 [see the infra creation](../infra/02_create_infra.html#configuration)
 
 ### DockerFile
-The provided Dockerfile should work for any model without any modification.
+The provided Dockerfile should work for any model without any modification. please note that the DockerFile for lambda and ECS are different
 
 ### Dockerignore
 
 3. Change `<model_folder>` to your model folder name. Add any other files that should be ignore to minimize the Docker image size.
 
-```dockerignore
+``` dockerignore
 **__pycache__**
 **/*.pyc
 **.cache**
 **/*.ipynb_checkpoints*
 **/*.DS_store*
-<model_folder>/scenarios/*  // [!code focus]
-<model_folder>/.git/objects // [!code focus]
+<model_folder>/scenarios/*    <-- TO CHANGE
+<model_folder>/.git/objects   <-- TO CHANGE
 ```
 
 ::: tip Note 
@@ -72,13 +89,18 @@ Ajust the python requirement if needed.
 
 We recommand installing [quetzal from pip](https://pypi.org/project/quetzal-transport/). if not, modify the dockerfile to copy your local quetzal folder in the docker and provide all of its requirements.
 
-### step-functions.json
-5. Modify the step function configuration according to model steps anch change `<model_name>` with your model name (see step 2.)
+### step-functions.json (lambda)
 
-:::tip Info
-Each step in the step-function is a Notebook to be run. It is what defines the model steps in the 
-[Run page](../howto/05_run_simulation.html#run-a-simulation)
+::: tip INFO 
+For `Lambda` infra only. Skip this step if using `ECS`
 :::
+
+
+5. Modify the step function configuration according to model steps and change `<model_name>` with your model name.
+
+
+Each step in the step-function is a Notebook to run. It is what defines the model steps in the 
+[Run page](../howto/05_run_simulation.html#run-a-simulation)
 
 Lines to modify are marked with `# TO EDIT.` (`# TO EDIT.` must be removed from the filnal json file.)
 
@@ -150,60 +172,52 @@ The last step has `"End": true` instead of `Next: Step_x`
     },
 ```
 
+
+
+### steps.json (ECS)
+
+::: tip INFO 
+For `ECS` infra only. Skip this step if using `Lambda`
+:::
+
+
+5. Modify the steps configuration according to model steps.
+
+
+Each step in the steps.jsons is a Notebook to run. It is what defines the model steps in the 
+[Run page](../howto/05_run_simulation.html#run-a-simulation)
+
+steps are executed in order.
+
+```json
+[
+    {
+        "name": "default",
+        "steps": [
+            {
+                "name": "step 1",
+                "path": "notebooks/2_model/test_1.ipynb"
+            },
+            {
+                "name": "step 2",
+                "path": "notebooks/2_model/test_2.ipynb"
+            }
+        ]
+    }
+]
+
+```
+
 ### modelConfig.json
 This file is used to set model wide configuration (values choices, units, etc)
-see  [model config](./07_model_configure_advanced#model-config).
+(see  [model config](./07_model_configure_advanced#model-config).)
 
 ## Deploying
+for the first deployment. you must at least deploy those 3 ressources.
+(see [update-model](./05_model_update))
 
-7. Navigate to the script folder `docker/scripts` in your terminal
+* Docker [model update](./05_model_update#update-model)
+* steps [steps update](./05_model_update#update-steps).
+* scenario [scenario update](./05_model_update#update-scenario).
 
-### Docker
-8. Build and push the first image to the ECR Repository using the following command
-
-
-::: info Windows 
-make sure to <b>open docker desktop</b> first
-:::
-
-::: code-group
-
-```bash [Linux]
-./push-image.sh <model_folder> initial
-```
-```bat [Windows]
-push-image.bat <model_folder> initial
-```
-:::  
-
-::: tip Info 
-This function will build the docker locally and push it on aws (ECR).then it will update the lambda function with the newly pushed docker. This operation can be long. Updating the docker is faster as it can reuse existing layers.
-:::
-
-### step-function
-9. Push the step function definition to aws (step-function)
-
-```bash
-python update-function-config.py <model_folder>
-```
-
-### Scenarios
-10. Add Scenarios to the database (s3).
-
-You can add more than one scenario at the time `(<scenario> <scenario2> ...)`
-
-```bash
-python update-S3-model-files.py <model_folder> <scenario>
-```
-::: tip Note 
-this script will copy all files from `<model_folder>/scenarios/<scenario>/` to S3
-:::
-
-::: warning Important
-The webapp expect a base scenario to work properly. Base scenario are non editable in the webapp
-:::
-
-::: danger Danger
-data will be permenently replace on the database for the updated scenarios.
-:::
 
