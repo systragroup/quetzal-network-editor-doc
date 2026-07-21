@@ -112,4 +112,4 @@ Les sorties du modèle exportées au format .csv peuvent être parcourues direct
 ![Alt text](/results/result_table.png)
 
 # Architecture Cloud
-<img src="/api.svg" alt="dessin" width="800"/>
+<img src="/quenedi_infra.png" alt="dessin" width="800"/>

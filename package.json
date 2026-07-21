@@ -1,5 +1,5 @@
 {
-  "version": "8.0.g",
+  "version": "8.1.a",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
