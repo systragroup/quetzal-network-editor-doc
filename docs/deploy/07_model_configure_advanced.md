@@ -136,8 +136,8 @@ scenario named **base** is always lock
 
 ## Model Config 
 This file is unique for a model (under _common/ in the database) and is used to defined some parameters in the front-end such as display units
-::: danger New version 8.0
-the **attributesChoices.json** file was removed and its values are now defined in this modelConfig.json globally for a model and not per scenario.
+::: tip 
+modelConfig can also be added in **inputs/modelConfig.json** in a zip file instead. this one will have priority over a global one.
 
 :::
 
