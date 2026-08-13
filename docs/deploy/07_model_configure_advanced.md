@@ -99,36 +99,19 @@ Here we have an example of all possible parameters into a single "general" categ
 
 ![Alt text](/deploy/scenario_lock.png)
 
-you can lock any scenario simply by adding a **.lock** empty file at the root dir of the project
-
-```kotlin
-├─ inputs
-|  ├─ pt           
-|  |  ├─ links.geojson 
-|  │  └─ nodes.geojson
-|  ├─ road             
-|  |  ├─ road_links.geojson 
-|  │  └─ road_nodes.geojson 
-|  ├─ params.json      
-│  └─ ... 
-├─ outputs
-│  └─ ... 
-├─ styles.json        
-├─ .lock       // [!code focus]   
-└─ ... 
-```
-
-There is also a script provided to lock or unlock one or many scenarios
+you can lock (or unlock) any scenario with the provided scripts.
 
 ::: code-group
 ```bash [lock]
-python lock-scenarios.py <model_folder> <scenario1> <scenario2>
+python lock-scenarios.py <model_folder> <scenario1>
 ```
 
 ```bash [unlock]
-python unlock-scenarios.py <model_folder> <scenario1> <scenario2>
+python unlock-scenarios.py <model_folder> <scenario1>
 ```
 :::
+
+Lock scenarios are specified on s3 in _common/lock.json.
 
 ::: tip Note 
 scenario named **base** is always lock
